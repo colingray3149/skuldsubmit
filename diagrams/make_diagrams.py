@@ -86,22 +86,23 @@ def d2():
         (1, 2, "seat.ask.mimir (delegates)", True),
         (2, 3, "skuld2.campaign_approve: card with bound values", True),
         (3, 0, "approval card (phone / chat / CLI)", True),
-        (0, 3, "yes  (9 card pairs before one was consumed)", True),
+        (0, 3, "yes  (21 cards over the day; 3 pairs consumed)", True),
         (3, 6, "campaign approved (eggs commit)", True),
         (2, 6, "sweep_plan, sweep_stage: Run00010/11 CASE_BUILT", True),
         (4, 3, "kube.workload.create_many (campaign reservation)", True),
         (3, 5, "pod on mini (seat kubert, lane kubert-skuld2)", True),
-        (5, 4, "exit 2: missing --deadline-seconds; workload_watch wakes", True),
-        (4, 3, "incident.raise (stable key) / heartbeat", True),
-        (5, 4, "ODIN-STATUS heartbeats, frames (run in integration pods)", False),
-        (4, 6, "collect: export -> run record COMMITTED", False),
+        (5, 4, "1st launch: exit 2, no --deadline-seconds (fixed; -2 cards approved)", True),
+        (4, 3, "incident.raise (stable key) / workload_watch wake", True),
+        (3, 5, "2nd launch 03:37 UTC: Sod Run00012, ZND Run00013", True),
+        (5, 4, "ODIN-STATUS samples, 10 checkpoints; Sod reaches end time", True),
+        (5, 6, "collect: export -> run records COMMITTED (STOPPED/WALL_BUDGET)", True),
         (2, 7, "seat.ask.var: validation claim artifact", False),
         (7, 2, "verdict: approve / changes", False),
         (2, 8, "lessons, brain pages, validation matrix", False),
         (2, 1, "summary to the owner", False),
     ]
     n = len(lanes)
-    fig, ax = plt.subplots(figsize=(11, 7.4))
+    fig, ax = plt.subplots(figsize=(11, 8.0))
     ax.set_xlim(-0.6, n - 0.4); ax.set_ylim(len(msgs) + 0.9, -1.1); ax.axis("off")
     for i, name in enumerate(lanes):
         ax.text(i, -0.55, name, ha="center", va="center", fontsize=9, family=FONT, color=INK,
@@ -115,7 +116,7 @@ def d2():
                                     shrinkA=2, shrinkB=2, mutation_scale=9))
         ax.text((a + b) / 2, y - 0.17, f"{k + 1}. {text}", ha="center", va="bottom", fontsize=7.6, family=FONT, color=INK)
     ax.plot([], [], color=ACCENT, lw=1.3, label="ran live, 2026-11-16/17 (UTC), with the outcome shown")
-    ax.plot([], [], color=GRAY, lw=1.0, ls="--", label="designed; exercised in earlier integration runs, not reached by these two campaigns")
+    ax.plot([], [], color=GRAY, lw=1.0, ls="--", label="designed; exercised in earlier live checks, not yet on these campaigns")
     ax.legend(loc="lower center", bbox_to_anchor=(0.5, -0.04), ncol=1, fontsize=8, frameon=False, prop={"family": FONT})
     for ext in ("pdf", "svg", "png"):
         fig.savefig(OUT / f"d2_agent_loop_sequence.{ext}", bbox_inches="tight", dpi=200, facecolor="white")
