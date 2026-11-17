@@ -1,0 +1,27 @@
+utc	source	severity	phone_page	signature
+2026-11-16T09:53:01Z	seat:kubert	Warning	false	seat:kubert:pc node image filesystem 91% full; image pruning freeing 0 bytes
+2026-11-16T10:42:48Z	seat:kubert	Warning	false	seat:kubert:Node pc image filesystem at 93% used (7% free), repeated FreeDiskSpaceFailed eve
+2026-11-16T10:46:55Z	seat:kubert	Warning	false	seat:kubert:Node pc image filesystem 93% used (~7% free), below the 15% floor; FreeDiskSpace
+2026-11-16T11:42:05Z	seat:kubert	Warning	false	seat:kubert:pc image filesystem nearly full; disk space GC failing
+2026-11-16T17:02:07Z	seat:mimir	Error	true	todo-blocked:a84b3803-105d-40f7-877b-2f3f3cd90844:approvals
+2026-11-16T17:03:37Z	seat:mimir	Error	true	todo-blocked:a84b3803-105d-40f7-877b-2f3f3cd90844:constraints
+2026-11-16T17:03:39Z	seat:mimir	Warning	false	seat:mimir:Postdeploy campaign approvals inaccessible across scope
+2026-11-16T17:05:09Z	seat:mimir	Warning	false	seat:mimir:Postdeploy approval and incident records inaccessible
+2026-11-16T17:06:03Z	seat:mimir	Warning	false	seat:mimir:Verify reported postdeploy approvals against scoped receipts
+2026-11-16T17:08:48Z	seat:kubert	Error	true	todo-blocked:cb75b1d2-1db6-41a0-b018-7433553110c1:authorized-view
+2026-11-16T17:08:48Z	seat:kubert	Error	true	todo-blocked:cb75b1d2-1db6-41a0-b018-7433553110c1:receipts
+2026-11-16T17:13:55Z	seat:mimir	Warning	false	seat:mimir:Authorized operator required: postdeploy receipt scope denial
+2026-11-16T17:17:21Z	seat:kubert	Info	false	seat:kubert:Gungnir seat cannot run rustc: capsule has no /dev/null (sandbox dev mount missi
+2026-11-16T17:34:17Z	seat:mimir	Warning	false	seat:mimir:Ended delegated session recovery blocked by inaccessible history
+2026-11-17T00:31:15Z	seat:kubert	Warning	false	seat:kubert:pc node image filesystem at 96% used (4% free), rising steadily; FreeDiskSpaceFa
+2026-11-17T00:32:18Z	seat:kubert	Critical	true	seat:kubert:pc image filesystem 96% full (4% free); kubelet image GC freeing 0 bytes, steady
+2026-11-17T00:33:11Z	seat:kubert	Critical	true	seat:kubert:pc image filesystem 96% full (≈4% free) and still growing; kubelet image GC free
+2026-11-17T00:33:13Z	seat:kubert	Warning	false	seat:kubert:pc node image filesystem 96% used (FreeDiskSpaceFailed, 0 bytes freed)
+2026-11-17T00:34:21Z	seat:kubert	Critical	true	seat:kubert:pc image filesystem 96% full (~18 GB free, 4%) — image GC frees 0 bytes
+2026-11-17T00:35:11Z	seat:mimir	Warning	false	seat:mimir:Campaign approval records inaccessible; two owner decisions unverifiable
+2026-11-17T00:55:46Z	seat:kubert	Critical	true	seat:kubert:pc node image filesystem 96% used (4% free) at peak; repeated FreeDiskSpaceFaile
+2026-11-17T00:57:49Z	seat:kubert	Warning	false	seat:kubert:pc node image filesystem low on free space (86% used, dipped to 96% used)
+2026-11-17T00:58:33Z	seat:kubert	Warning	false	seat:kubert:node pc image filesystem down to 13% free (touched 4%), kubelet cannot reclaim
+2026-11-17T00:58:47Z	seat:kubert	Warning	false	seat:kubert:pc image filesystem sustained under 15% free; image reclamation frees 0 bytes
+2026-11-17T01:21:47Z	seat:mimir	Error	true	seat:mimir:skuld2-sweep-plan-readonly
+2026-11-17T01:33:26Z	seat:kubert	Warning	false	seat:kubert:skuld2-launch-flux-scheme-schema

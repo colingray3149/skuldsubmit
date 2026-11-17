@@ -1,0 +1,19 @@
+# Logs of the two skuld2-openfoam-mini pods launched by Kubert on mini, 2026-11-17T02:57Z (kubectl logs, verbatim)
+
+## pod odin-0391c2a3f209e30e751db3f68bea28aa-hwxmc  (workload skuld2-openfoam-mini, seat kubert, lane kubert-skuld2, node mini)
+created 2026-11-17T02:57:06Z  exit 2  finished 2026-11-17T02:57:11Z
+error: the following required arguments were not provided:
+  --deadline-seconds <DEADLINE_SECONDS>
+
+Usage: skuld2 case-run --input <INPUT> --deadline-seconds <DEADLINE_SECONDS> --work <WORK> --export <EXPORT> --expected-stage-sha256 <EXPECTED_STAGE_SHA256>
+
+For more information, try '--help'.
+
+## pod odin-d56a4744fc923fdb7b35aeb23f200c2d-pksff  (workload skuld2-openfoam-mini, seat kubert, lane kubert-skuld2, node mini)
+created 2026-11-17T02:57:15Z  exit 2  finished 2026-11-17T02:57:19Z
+error: the following required arguments were not provided:
+  --deadline-seconds <DEADLINE_SECONDS>
+
+Usage: skuld2 case-run --input <INPUT> --deadline-seconds <DEADLINE_SECONDS> --work <WORK> --export <EXPORT> --expected-stage-sha256 <EXPECTED_STAGE_SHA256>
+
+For more information, try '--help'.

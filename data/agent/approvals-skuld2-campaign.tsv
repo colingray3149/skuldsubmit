@@ -1,0 +1,20 @@
+requested_utc	expires_utc	decided_utc	issuer_seat	capability	status	decided_via
+2026-11-16T08:23:56.853Z	2026-11-16T09:23:56.853Z		mimir	skuld2.campaign_approve	expired	
+2026-11-16T08:23:56.856Z	2026-11-16T09:23:56.856Z		mimir	skuld2.campaign_approve	expired	
+2026-11-16T10:23:33.148Z	2026-11-16T11:23:33.148Z		mimir	skuld2.campaign_approve	expired	
+2026-11-16T10:23:33.153Z	2026-11-16T11:23:33.153Z		mimir	skuld2.campaign_approve	expired	
+2026-11-16T11:28:19.233Z	2026-11-16T12:28:19.233Z		mimir	skuld2.campaign_approve	expired	
+2026-11-16T11:28:21.232Z	2026-11-16T12:28:21.232Z		mimir	skuld2.campaign_approve	expired	
+2026-11-16T17:01:35.319Z	2026-11-16T18:01:35.319Z	2026-11-16T17:04:36.892	mimir	skuld2.campaign_approve	expired	owner device (phone or CLI)
+2026-11-16T17:01:35.32Z	2026-11-16T18:01:35.32Z	2026-11-16T17:04:36.902	mimir	skuld2.campaign_approve	expired	owner device (phone or CLI)
+2026-11-16T20:37:31.481Z	2026-11-16T21:37:31.481Z	2026-11-16T20:40:55.687	mimir	skuld2.campaign_approve	expired	owner chat
+2026-11-16T20:37:31.482Z	2026-11-16T21:37:31.482Z	2026-11-16T20:40:53.002	mimir	skuld2.campaign_approve	expired	owner chat
+2026-11-16T21:18:24.943Z	2026-11-16T22:18:24.943Z	2026-11-16T21:29:04.119	mimir	skuld2.campaign_approve	consumed	owner device (phone or CLI)
+2026-11-16T21:18:24.944Z	2026-11-16T22:18:24.944Z	2026-11-16T21:29:04.914	mimir	skuld2.campaign_approve	consumed	owner device (phone or CLI)
+2026-11-17T00:00:45.822Z	2026-11-17T01:00:45.822Z	2026-11-17T00:28:31.330	mimir	skuld2.campaign_approve	denied	owner device (phone or CLI)
+2026-11-17T00:00:45.824Z	2026-11-17T01:00:45.824Z	2026-11-17T00:28:31.314	mimir	skuld2.campaign_approve	denied	owner device (phone or CLI)
+2026-11-17T00:28:53.126Z	2026-11-17T01:28:53.126Z	2026-11-17T00:37:30.726	mimir	skuld2.campaign_approve	expired	owner CLI (odin approve)
+2026-11-17T00:28:53.139Z	2026-11-17T01:28:53.139Z	2026-11-17T00:37:30.700	mimir	skuld2.campaign_approve	expired	owner CLI (odin approve)
+2026-11-17T00:42:36.104Z	2026-11-17T01:42:36.104Z	2026-11-17T00:48:03.145	mimir	skuld2.campaign_approve	denied	owner device (phone or CLI)
+2026-11-17T00:48:23.034Z	2026-11-17T01:48:23.034Z	2026-11-17T00:48:47.888	mimir	skuld2.campaign_approve	consumed	owner device (phone or CLI)
+2026-11-17T00:48:23.035Z	2026-11-17T01:48:23.035Z	2026-11-17T00:48:39.236	mimir	skuld2.campaign_approve	consumed	owner device (phone or CLI)
