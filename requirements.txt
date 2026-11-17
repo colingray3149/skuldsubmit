@@ -1,0 +1,8 @@
+# Python 3.13. Figures, diagrams, the demo replay and the Cantera reference.
+cantera==3.2.0
+numpy==2.5.5
+matplotlib==3.11.2
+graphviz==0.21        # Python bindings; the `dot` binary (Graphviz >= 12) must be on PATH
+# Only to rebuild the report and deck:
+python-docx==1.2.0
+python-pptx==1.0.2
