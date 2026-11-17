@@ -1,0 +1,9 @@
+# Source: skuld2 (private repo) schema/run.toml at 0382a40, verbatim.
+# Shows: the run-card life cycle every run record follows (CREATED ... COMMITTED) and its terminal states.
+# skuld2 run record: stages in order, terminal states, pause reasons. src/run.rs repeats these lists and
+# tests/schema.rs compares the two.
+stages = ["CREATED", "CASE_BUILT", "CHECKED", "RUNNING", "PAUSED",
+          "TERMINAL", "POSTPROCESSED", "JUDGED", "EXPORTED", "COMMITTED"]
+
+terminal_states = ["COMPLETED", "STOPPED", "DIVERGED", "CRASHED", "FAILED"]
+pause_reasons   = ["model_error", "operator", "budget_review", "node_yield"]

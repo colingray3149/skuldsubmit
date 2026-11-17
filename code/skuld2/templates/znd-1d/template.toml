@@ -1,0 +1,182 @@
+# Source: skuld2 (private repo) templates/znd-1d/template.toml at 0382a40, verbatim.
+# Shows: a case template: typed, bounded parameters, derived quantities, validation metric and export.
+id = "znd-1d"
+version = 2
+module = "detonationFluid"
+fields = ["p", "T", "U", "H2", "O2", "N2"]
+family = "det1d-h2air"
+description = "1-D H2-air detonation tube on detonationFluid (B5(b)): the detonationFoam-OF14 1D_NH3_O2_cracking_0.3_detonation_OF14_fast case re-targeted to Burke2012 H2-air; closed end at x = 0, hot high-pressure driver of the same mixture, stops when the leading shock reaches sw_position_limit_m"
+mesh = [["blockMesh"]]
+end_time = "end_time_us / 1e6"
+
+# Grid: 25 mm over 5,682 / 11,364 / 22,727 cells is 4.4 / 2.2 / 1.1 um (B5(b) nominal grids).
+[params.cells]
+kind = "int"
+lo = 1000
+hi = 25000
+default = 5682
+
+[params.length_mm]                     # fixed: the probe stations below are laid out for 25 mm
+kind = "float"
+lo = 25.0
+hi = 25.0
+default = 25.0
+unit = "mm"
+
+[params.probe_spacing_mm]              # fixed: probes at every 0.5 mm, 0.5 to 24.5 mm (49 stations)
+kind = "float"
+lo = 0.5
+hi = 0.5
+default = 0.5
+unit = "mm"
+
+[params.driver_length_mm]
+kind = "float"
+lo = 0.5
+hi = 5.0
+default = 2.0
+unit = "mm"
+
+[params.driver_p_atm]
+kind = "float"
+lo = 10.0
+hi = 200.0
+default = 90.0
+unit = "atm"
+
+[params.driver_T]
+kind = "float"
+lo = 300.0
+hi = 3500.0
+default = 2000.0
+unit = "K"
+
+[params.phi]                           # H2 : O2 : N2 = 2 phi : 1 : 3.76 by mole
+kind = "float"
+lo = 0.7
+hi = 1.3
+default = 1.0
+
+[params.p_fill]
+kind = "float"
+lo = 2e4
+hi = 5e5
+default = 101325.0
+unit = "Pa"
+
+[params.T_fill]
+kind = "float"
+lo = 250.0
+hi = 600.0
+default = 300.0
+unit = "K"
+
+[params.sw_position_limit_m]           # solverTypeProperties SW_position_limit: stop when the lead shock passes it
+kind = "float"
+lo = 0.005
+hi = 0.0245
+default = 0.024
+unit = "m"
+
+[params.end_time_us]                   # cap; the shock-position stop normally ends the run first
+kind = "float"
+lo = 1.0
+hi = 100.0
+default = 20.0
+unit = "us"
+
+[params.n_writes]
+kind = "int"
+lo = 1
+hi = 500
+default = 20
+
+[params.probe_interval_ns]             # probe sampling period (first step after each multiple)
+kind = "float"
+lo = 0.1
+hi = 100.0
+default = 1.0
+unit = "ns"
+
+[params.max_co]                        # detonationFluid steps forward Euler + MUSCL: B5 at 0.4 clipped at 3500 K, 0.1 did not
+kind = "float"
+lo = 0.05
+hi = 0.9
+default = 0.1
+
+[params.solver_type]                   # Euler for the CJ check; NS_Sutherland adds viscous/diffusive transport
+kind = "choice"
+values = ["Euler", "NS_Sutherland"]
+default = "Euler"
+
+[params.flux_scheme]
+kind = "choice"
+values = ["Kurganov", "Tadmor", "HLL", "HLLC", "HLLCP", "AUSM+", "AUSM+up"]
+default = "Kurganov"
+
+[params.chem_abs_tol]
+kind = "float"
+lo = 1e-14
+hi = 1e-4
+default = 1e-8
+
+[params.chem_rel_tol]
+kind = "float"
+lo = 1e-6
+hi = 1e-2
+default = 1e-4
+
+[params.d_cj_m_s]                      # D_CJ for this mixture (B1 refs.parquet); default: SDToolbox CJspeed,
+kind = "float"                         # Burke2012, phi 1, 1 atm, 300 K = 1975.2 m/s (phi 0.7: 1801.5, 1.3: 2055.7)
+lo = 1400.0
+hi = 2400.0
+default = 1975.2
+unit = "m/s"
+
+[params.induction_length_m]            # ZND L_ind for this mixture from B1 refs.parquet; resolution record only
+kind = "float"
+lo = 1e-5
+hi = 1e-2
+default = 1.9e-4
+unit = "m"
+
+[derived]
+dx = "length_mm / 1e3 / cells"
+# Burke2012 molar masses (constant/foam/thermo.foam): H2 2.01594, O2 31.9988, N2 28.0134
+m_H2 = "2.0 * phi * 2.01594"
+m_O2 = "31.9988"
+m_N2 = "3.76 * 28.0134"
+Y_H2 = "m_H2 / (m_H2 + m_O2 + m_N2)"
+Y_O2 = "m_O2 / (m_H2 + m_O2 + m_N2)"
+Y_N2 = "m_N2 / (m_H2 + m_O2 + m_N2)"
+driver_p = "driver_p_atm * 101325.0"
+driver_x_m = "driver_length_mm / 1e3"
+shock_detection_pressure = "p_fill + 100.0"   # fork default: fill + 100 Pa
+end_time_s = "end_time_us / 1e6"
+write_interval = "end_time_us / 1e6 / n_writes"
+probe_interval = "probe_interval_ns / 1e9"
+delta_t0 = "1e-11"
+
+[resolution]
+dx_min_m = "dx"
+induction_length_m = "induction_length_m"
+amr_levels = "0"
+
+[[validation]]
+id = "B5-b"
+metric = "cj_speed"
+function = "tubeProbes"
+tolerance = { rel = 0.01 }
+
+[export]
+shape = ["cells"]
+times = "all"
+access = "restricted"
+channels = [
+    { field = "p", unit = "Pa", transform = "log" },
+    { field = "T", unit = "K", transform = "none" },
+    { field = "U", component = 0, unit = "m/s", transform = "none" },
+    { field = "H2", unit = "1", transform = "none" },
+    { field = "O2", unit = "1", transform = "none" },
+    { field = "N2", unit = "1", transform = "none" },
+]

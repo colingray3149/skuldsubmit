@@ -1,0 +1,16 @@
+# Source: skuld2 (private repo) campaigns/postdeploy-znd.toml at 0382a40, verbatim.
+# Shows: the one-case acceptance campaign Mimir proposed and the owner approved (Run00010).
+# Post-deploy acceptance: one ZND case through Odin (approved card: cells [5682, 5682], rung validation, 1 case,
+# 2 core-h, mini). Checks the governed launch and collect path; the B5 grid sequence is p0-znd.
+id = "postdeploy-znd"
+campaign = "postdeploy-znd"
+rung = "validation"
+node_preference = ["mini"]
+template = "znd-1d"
+design = "list"
+points = 1
+seed = 1
+ranks = 1
+deadline_seconds = 7200
+core_hours_cap = 2.0
+list = [{ cells = 5682 }]

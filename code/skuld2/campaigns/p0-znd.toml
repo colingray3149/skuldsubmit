@@ -1,0 +1,16 @@
+# Source: skuld2 (private repo) campaigns/p0-znd.toml at 0382a40, verbatim.
+# Shows: the B5 three-grid campaign as a declared file (cases, ranks, deadline, core-hour cap).
+# B5(b): H2-air tube, 2000 K driver; finest-grid lead shock speed within 1% of the Burke2012 D_CJ,
+# induction length within 5% of ZND, with monotone convergence. This is not the Sun D1-3 3000 K setup.
+id = "p0-znd"
+campaign = "p0-znd"
+rung = "validation"
+node_preference = ["mini"]
+template = "znd-1d"
+design = "list"
+points = 3
+seed = 1
+ranks = 1
+deadline_seconds = 86400
+core_hours_cap = 72.0
+list = [{ cells = 5682 }, { cells = 11364 }, { cells = 22727 }]
