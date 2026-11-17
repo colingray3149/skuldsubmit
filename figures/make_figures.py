@@ -28,12 +28,14 @@ plt.rcParams.update({
     "axes.grid": True, "grid.color": LIGHT, "grid.linewidth": 0.6, "axes.axisbelow": True,
     "axes.spines.top": False, "axes.spines.right": False, "legend.frameon": False, "legend.fontsize": 8,
     "lines.linewidth": 1.4, "lines.markersize": 5, "savefig.dpi": 200, "pdf.fonttype": 42, "svg.fonttype": "none",
+    "svg.hashsalt": "skuldsubmit",
 })
 
 
 def save(fig, name):
     for ext in ("pdf", "svg", "png"):
-        fig.savefig(OUT / f"{name}.{ext}", bbox_inches="tight", facecolor="white")
+        meta = {"CreationDate": None} if ext == "pdf" else {"Date": None} if ext == "svg" else {}
+        fig.savefig(OUT / f"{name}.{ext}", bbox_inches="tight", facecolor="white", metadata=meta)
     plt.close(fig)
     print("wrote", name)
 
