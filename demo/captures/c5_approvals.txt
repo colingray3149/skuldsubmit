@@ -1,0 +1,22 @@
+$ approvals ledger, capability skuld2.campaign_approve   (issuer, status, how the owner decided)
+11-16T08:23:56  raised by mimir   expired   
+11-16T08:23:56  raised by mimir   expired   
+11-16T10:23:33  raised by mimir   expired   
+11-16T10:23:33  raised by mimir   expired   
+11-16T11:28:19  raised by mimir   expired   
+11-16T11:28:21  raised by mimir   expired   
+11-16T17:01:35  raised by mimir   expired   owner device (phone or CLI)
+11-16T17:01:35  raised by mimir   expired   owner device (phone or CLI)
+11-16T20:37:31  raised by mimir   expired   owner chat
+11-16T20:37:31  raised by mimir   expired   owner chat
+11-16T21:18:24  raised by mimir   consumed  owner device (phone or CLI)
+11-16T21:18:24  raised by mimir   consumed  owner device (phone or CLI)
+11-17T00:00:45  raised by mimir   denied    owner device (phone or CLI)
+11-17T00:00:45  raised by mimir   denied    owner device (phone or CLI)
+11-17T00:28:53  raised by mimir   expired   owner CLI (odin approve)
+11-17T00:28:53  raised by mimir   expired   owner CLI (odin approve)
+11-17T00:42:36  raised by mimir   denied    owner device (phone or CLI)
+11-17T00:48:23  raised by mimir   consumed  owner device (phone or CLI)
+11-17T00:48:23  raised by mimir   consumed  owner device (phone or CLI)
+11-17T03:34:32  raised by mimir   consumed  owner device (phone or CLI)
+11-17T03:34:32  raised by mimir   consumed  owner device (phone or CLI)

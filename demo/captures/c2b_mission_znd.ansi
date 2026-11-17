@@ -1,0 +1,12 @@
+ [38;2;245;194;231mMissions[39m [38;2;102;112;143m8 on the board · ↑↓ choose · enter opens · r render · p pause · u resume[39m
+   [38;2;166;227;161m•[39m [1mgpu-admission-stub[0m [38;2;166;227;161msucceeded[39m [38;2;102;112;143mno sample yet[39m
+   [38;2;166;227;161m•[39m [1mgpu-admission-stub[0m [38;2;166;227;161msucceeded[39m [38;2;102;112;143mno sample yet[39m
+   [38;2;166;227;161m•[39m [1moffload-stub[0m [38;2;166;227;161msucceeded[39m [38;2;102;112;143moffload:mini-stub[39m [38;2;102;112;143mno sample yet[39m
+   [38;2;166;227;161m•[39m [1moffload-stub[0m [38;2;166;227;161msucceeded[39m [38;2;102;112;143moffload:mini-stub[39m [38;2;102;112;143mno sample yet[39m
+ [38;2;245;194;231m›[39m [38;2;166;227;161m•[39m [1mskuld2-openfoam-mini[0m [38;2;166;227;161msucceeded[39m [38;2;102;112;143msample 49s ago[39m [38;2;102;112;143m1 checkpoints[39m
+   [38;2;166;227;161m•[39m [1mskuld2-openfoam-mini[0m [38;2;166;227;161msucceeded[39m [38;2;102;112;143msample 1m ago[39m [38;2;102;112;143m10 checkpoints[39m
+   [38;2;243;139;168m•[39m [1mskuld2-openfoam-mini[0m [38;2;243;139;168mfailed[39m [38;2;102;112;143mno sample yet[39m
+   [38;2;243;139;168m•[39m [1mskuld2-openfoam-mini[0m [38;2;243;139;168mfailed[39m [38;2;102;112;143mno sample yet[39m
+
+ [38;2;245;194;231mskuld2-openfoam-mini[39m [38;2;102;112;143mrun:live:d227607e-31bb-471e-8699-60cdd4a92b91:pod:batch:5c43fc7482c9a7ddd64de7b1d398011a14cc3068f19ce04f6ddeea9bcd673653[39m
+ [38;2;102;112;143mlast sample[39m {"cells":5682,"control_seq":0,"delta_t_ns":0.0143997120037,"end_time_us":20,"nan_seen":0,"ranks":1,"ranks_dead":1,"residual_max":0.872655695228,"s…

@@ -1,0 +1,23 @@
+$ skuld2 status Run00012   (trimmed: identity, stages, terminal)
+    run_id: Run00012
+  campaign: postdeploy-sod-2
+      rung: validation
+  template: sod-shocktube
+    module: shockFluid
+    family: canonical-sod
+      node: mini
+     ranks: 1
+     cells: 250
+  openfoam: foundation-14@64cfdf54
+    params: {'cells': 250, 'end_time': 0.0063246, 'max_co': 0.2, 'flux_scheme': 'Kurganov'}
+   2026-11-17T03:35:56Z  CREATED
+   2026-11-17T03:35:56Z  CASE_BUILT
+   2026-11-17T03:37:34Z  CHECKED
+   2026-11-17T03:37:34Z  RUNNING
+   2026-11-17T03:37:35Z  TERMINAL
+   2026-11-17T03:37:43Z  POSTPROCESSED
+   2026-11-17T03:39:58Z  JUDGED
+   2026-11-17T03:39:58Z  EXPORTED
+   2026-11-17T03:39:58Z  COMMITTED
+  terminal: {'state': 'STOPPED', 'name': 'WALL_BUDGET'}
+sim_time_s: 0.0063246   wall_s: 1.017

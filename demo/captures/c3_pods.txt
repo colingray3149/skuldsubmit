@@ -1,0 +1,27 @@
+$ k3s kubectl get pods -l odin.dev/workload=skuld2-openfoam-mini -L odin.dev/seat-id,odin.dev/lane-id
+NAME                                          READY   STATUS      RESTARTS   AGE     SEAT-ID   LANE-ID
+odin-0391c2a3f209e30e751db3f68bea28aa-hwxmc   0/1     Error       0          44m     kubert    kubert-skuld2
+odin-31a68f1cea42b316cb4abeb5874ee2cb-xlpkb   0/1     Completed   0          4m      kubert    kubert-skuld2
+odin-a88c6b5a89aec0577911ab4582ebb974-b94rt   0/1     Completed   0          3m42s   kubert    kubert-skuld2
+odin-d56a4744fc923fdb7b35aeb23f200c2d-pksff   0/1     Error       0          44m     kubert    kubert-skuld2
+
+$ k3s kubectl logs <Sod pod, Run00012>
+ODIN-STATUS {"cells":250.0,"control_seq":0,"end_time_us":6324.599999999999,"nan_seen":0.0,"ranks":1.0,"shm_used_mib":0.0,"wall_s":0.0,"writes":0.0}
+ODIN-CHECKPOINT {"label":"t=0.00063246","time":"0.00063246"}
+ODIN-CHECKPOINT {"label":"t=0.00126492","time":"0.00126492"}
+ODIN-CHECKPOINT {"label":"t=0.00189738","time":"0.00189738"}
+ODIN-CHECKPOINT {"label":"t=0.00252984","time":"0.00252984"}
+ODIN-CHECKPOINT {"label":"t=0.0031623","time":"0.0031623"}
+ODIN-CHECKPOINT {"label":"t=0.00379476","time":"0.00379476"}
+ODIN-CHECKPOINT {"label":"t=0.00442722","time":"0.00442722"}
+ODIN-CHECKPOINT {"label":"t=0.00505968","time":"0.00505968"}
+ODIN-CHECKPOINT {"label":"t=0.00569214","time":"0.00569214"}
+ODIN-CHECKPOINT {"label":"t=0.0063246","time":"0.0063246"}
+ODIN-STATUS {"cells":250.0,"control_seq":0,"courant_max":0.195833164,"delta_t_ns":22587.85714,"end_time_us":6324.599999999999,"nan_seen":0.0,"ranks":1
+skuld2: Run00012 exported
+
+$ k3s kubectl logs <ZND pod, Run00013>
+ODIN-STATUS {"cells":5682.0,"control_seq":0,"end_time_us":20.0,"nan_seen":0.0,"ranks":1.0,"shm_used_mib":0.0,"wall_s":0.0,"writes":0.0}
+ODIN-CHECKPOINT {"label":"t=2.63996160045e-11","time":"2.63996160045e-11"}
+ODIN-STATUS {"cells":5682.0,"control_seq":0,"delta_t_ns":0.0143997120037,"end_time_us":20.0,"nan_seen":0.0,"ranks":1.0,"ranks_dead":1,"residual_max":0
+skuld2: Run00013 exported

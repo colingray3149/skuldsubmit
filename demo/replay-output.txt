@@ -1,0 +1,29 @@
+
+== 1. reference (B1, SDToolbox CJspeed + zndsolve on Burke 2012)
+  h2air-phi1-1atm-300K   D_CJ  1975.17 m/s   p_vN  28.00 bar   T_vN  1538.8 K   L_ind  199.37 um
+  2h2-o2-7ar-1atm        D_CJ  1691.12 m/s   p_vN  28.89 bar   T_vN  2052.1 K   L_ind   78.65 um
+
+== 2. chemistry: OpenFOAM-14 0D ignition vs Cantera 3.2 (same mechanism; gate |diff| <= 2 %)
+of14-vn-1539K-28bar-T.dat      T0  1538.8 K  p0  28.0 bar  tau OF14 0.5342 us  Cantera 0.5334 us  diff +0.15 %
+of14-T1300K-20bar-T.dat        T0  1300.0 K  p0  20.0 bar  tau OF14 3.8760 us  Cantera 3.8789 us  diff -0.08 %
+  -> of14-vn-1539K-28bar-T.dat: PASS
+  -> of14-T1300K-20bar-T.dat: PASS
+
+== 3. the solve (RUNS.tsv line and measured cost)
+  2026-11-16T21:33:25Z znd-ar7-coarse   mini ok wall  17.3 min
+  2026-11-16T23:50:27Z znd-ar7-medium   mini ok wall  67.3 min
+   5,682 cells  32,990 steps  4 ranks  c = 22.2 core-us/cell-step  1.15 core-h
+  11,364 cells  67,324 steps  4 ranks  c = 21.1 core-us/cell-step  4.48 core-h
+
+== 4. evaluation: lead-shock speed from 29 probes (x >= 10 mm), gate |D/D_CJ - 1| <= 1 % on both grids
+  ar7-coarse   D  1696.14 m/s  error +0.296 %  (first/second half 1697.5/1693.9)  PASS
+  ar7-medium   D  1695.72 m/s  error +0.272 %  (first/second half 1697.9/1693.8)  PASS
+  error falls with refinement: True
+  1D CJ gate on 2H2:O2:7Ar: PASS
+
+== 5. counter-case: stoichiometric H2-air, same method (recorded known-unstable, not a gate)
+  h2air-co01-coarse  D  1996.44 m/s  error +1.077 %  (halves 2005.0 -> 1990.8)  FAIL
+  h2air-co01-medium  D  1554.99 m/s  error -21.273 %  (halves 1655.1 -> 1489.0)  FAIL
+  the coarse grid's +1.08 % is held up by numerical dissipation; refined, the front decays (-21 %).
+  The evaluator does not tune until it passes: the gate moved to a stable mixture by the owner's decision,
+  with the criterion unchanged, and H2-air stays recorded as a failure.

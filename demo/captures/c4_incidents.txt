@@ -1,0 +1,22 @@
+$ journalctl --user -u odind | grep "odind::incidents" | grep source=seat:kubert   (UTC, formatted)
+11-16T09:53:01  Warning  page=false  seat:kubert:pc node image filesystem 91% full; image pruning freeing 0 bytes
+11-16T10:42:48  Warning  page=false  seat:kubert:Node pc image filesystem at 93% used (7% free), repeated FreeDiskSpaceFailed eve
+11-16T10:46:55  Warning  page=false  seat:kubert:Node pc image filesystem 93% used (~7% free), below the 15% floor; FreeDiskSpace
+11-16T11:42:05  Warning  page=false  seat:kubert:pc image filesystem nearly full; disk space GC failing
+11-16T17:08:48  Error    page=true   todo-blocked:cb75b1d2-1db6-41a0-b018-7433553110c1:authorized-view
+11-16T17:08:48  Error    page=true   todo-blocked:cb75b1d2-1db6-41a0-b018-7433553110c1:receipts
+11-16T17:17:21  Info     page=false  seat:kubert:Gungnir seat cannot run rustc: capsule has no /dev/null (sandbox dev mount missi
+11-17T00:31:15  Warning  page=false  seat:kubert:pc node image filesystem at 96% used (4% free), rising steadily; FreeDiskSpaceFa
+11-17T00:32:18  Critical page=true   seat:kubert:pc image filesystem 96% full (4% free); kubelet image GC freeing 0 bytes, steady
+11-17T00:33:11  Critical page=true   seat:kubert:pc image filesystem 96% full (≈4% free) and still growing; kubelet image GC free
+11-17T00:33:13  Warning  page=false  seat:kubert:pc node image filesystem 96% used (FreeDiskSpaceFailed, 0 bytes freed)
+11-17T00:34:21  Critical page=true   seat:kubert:pc image filesystem 96% full (~18 GB free, 4%) — image GC frees 0 bytes
+11-17T00:55:46  Critical page=true   seat:kubert:pc node image filesystem 96% used (4% free) at peak; repeated FreeDiskSpaceFaile
+11-17T00:57:49  Warning  page=false  seat:kubert:pc node image filesystem low on free space (86% used, dipped to 96% used)
+11-17T00:58:33  Warning  page=false  seat:kubert:node pc image filesystem down to 13% free (touched 4%), kubelet cannot reclaim
+11-17T00:58:47  Warning  page=false  seat:kubert:pc image filesystem sustained under 15% free; image reclamation frees 0 bytes
+11-17T01:33:26  Warning  page=false  seat:kubert:skuld2-launch-flux-scheme-schema
+
+# 13 pc-disk incidents, 13 different signatures (the summary wording), 4 phone pages.
+# After the fix (incident.raise takes a stable key; signature = seat:<seat>:<key>):
+#   01:33:26  Warning  seat:kubert:skuld2-launch-flux-scheme-schema

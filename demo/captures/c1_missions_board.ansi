@@ -1,0 +1,12 @@
+ [38;2;166;227;161m•[39m Sinmara [38;2;102;112;143mterra[39m   [38;2;243;139;168m•[39m Kubert [38;2;102;112;143mgo-deepseek-flash[39m   [38;2;243;139;168m•[39m Mimir [38;2;102;112;143mterra[39m   [38;2;166;227;161m•[39m Models   [38;2;166;227;161m•[39m Overview  [1m[48;2;48;57;85m [38;2;166;227;161m•[39m Missions [0m  [38;2;166;227;161m•[39m Capabilities   [38;2;166;227;161m•[39m Brain
+
+ [38;2;245;194;231mMissions[39m [38;2;102;112;143m8 on the board · ↑↓ choose · enter opens · r render · p pause · u resume[39m
+   [38;2;166;227;161m•[39m [1mgpu-admission-stub[0m [38;2;166;227;161msucceeded[39m [38;2;102;112;143mno sample yet[39m
+   [38;2;166;227;161m•[39m [1mgpu-admission-stub[0m [38;2;166;227;161msucceeded[39m [38;2;102;112;143mno sample yet[39m
+   [38;2;166;227;161m•[39m [1moffload-stub[0m [38;2;166;227;161msucceeded[39m [38;2;102;112;143moffload:mini-stub[39m [38;2;102;112;143mno sample yet[39m
+   [38;2;166;227;161m•[39m [1moffload-stub[0m [38;2;166;227;161msucceeded[39m [38;2;102;112;143moffload:mini-stub[39m [38;2;102;112;143mno sample yet[39m
+   [38;2;166;227;161m•[39m [1mskuld2-openfoam-mini[0m [38;2;166;227;161msucceeded[39m [38;2;102;112;143msample 3m ago[39m [38;2;102;112;143m1 checkpoints[39m
+ [38;2;245;194;231m›[39m [38;2;166;227;161m•[39m [1mskuld2-openfoam-mini[0m [38;2;166;227;161msucceeded[39m [38;2;102;112;143msample 3m ago[39m [38;2;102;112;143m10 checkpoints[39m
+   [38;2;243;139;168m•[39m [1mskuld2-openfoam-mini[0m [38;2;243;139;168mfailed[39m [38;2;102;112;143mno sample yet[39m
+   [38;2;243;139;168m•[39m [1mskuld2-openfoam-mini[0m [38;2;243;139;168mfailed[39m [38;2;102;112;143mno sample yet[39m
+
