@@ -1,0 +1,88 @@
+{
+ "ref": {
+  "id": "h2air-phi1-1atm-300K",
+  "mech": "Burke2012.yaml",
+  "d_cj": 1975.1746278769756,
+  "l_ind": 0.00019937055212103318
+ },
+ "cases": [
+  {
+   "case": "runs/znd/detonationFluid-vanLeer-n5682-co01",
+   "cells": 5682,
+   "dx": 4.399859204505456e-06,
+   "cells_per_lind": 45.31293908606842,
+   "probes_fitted": 29,
+   "D": 1996.437815486168,
+   "D_err_pct": 1.0765219089537983,
+   "L_ind_heat_release_proxy": 4.839845124956013e-05,
+   "L_proxy_err_pct": -75.72437316611403,
+   "p_peak": 2775638.897,
+   "shock_x": 0.023906634987680395,
+   "field_time": 9.3e-06,
+   "D_first_half": 2005.0190774525151,
+   "D_second_half": 1990.7726436779892,
+   "fit_window_mm": [
+    10.0,
+    24.0
+   ],
+   "step_Tmax_K": 3240.3950525,
+   "steps_sampled": 35557,
+   "steps_at_3500K": 0,
+   "gate_D_within_1pct": false
+  },
+  {
+   "case": "runs/znd/detonationFluid-vanLeer-n11364-co01",
+   "cells": 11364,
+   "dx": 2.199929602252728e-06,
+   "cells_per_lind": 90.62587817213684,
+   "probes_fitted": 29,
+   "D": 1554.9883505518624,
+   "D_err_pct": -21.27337357389772,
+   "L_ind_heat_release_proxy": 0.002303326293558606,
+   "L_proxy_err_pct": 1055.299149776297,
+   "p_peak": 1946328.903,
+   "shock_x": 0.023967133051742345,
+   "field_time": 1.13e-05,
+   "D_first_half": 1655.1382018718698,
+   "D_second_half": 1489.0229427730692,
+   "fit_window_mm": [
+    10.0,
+    24.0
+   ],
+   "step_Tmax_K": 3242.2961017,
+   "steps_sampled": 71963,
+   "steps_at_3500K": 0,
+   "gate_D_within_1pct": false
+  },
+  {
+   "case": "runs/znd/detonationFluid-vanLeer-n5682-co005",
+   "cells": 5682,
+   "dx": 4.399859204505456e-06,
+   "cells_per_lind": 45.31293908606842,
+   "probes_fitted": 29,
+   "D": 1907.402716422928,
+   "D_err_pct": -3.4311858049175354,
+   "L_ind_heat_release_proxy": 0.0007523759239704345,
+   "L_proxy_err_pct": 277.37565350859074,
+   "p_peak": 1856152.13,
+   "shock_x": 0.023889035550862373,
+   "field_time": 9.7e-06,
+   "D_first_half": 1992.3581093088608,
+   "D_second_half": 1776.4557010162362,
+   "fit_window_mm": [
+    10.0,
+    24.0
+   ],
+   "step_Tmax_K": 3222.0331635,
+   "steps_sampled": 70389,
+   "steps_at_3500K": 0,
+   "gate_D_within_1pct": false
+  }
+ ],
+ "pass": {
+  "D_all_grids_within_1pct": false,
+  "monotone_D": false,
+  "unclipped": true
+ },
+ "note": "2026-11-16 finish-1d: detonationFluid Kurganov/vanLeer, forward Euler, matched CJ/ZND start, 4 ranks. Fine grid (22727) not run at Co<=0.4 within budget (~3.2e9 cell-steps, ~28 core-h at Co 0.1). Gate unchanged: 1% of D_CJ on all three grids, monotone, no 3500 K clipping. Coarse Co0.1 +1.08% (fails), medium Co0.1 -21.27% (decaying front), coarse Co0.05 -3.43% (decays after 17 mm). Speeds are not converged in Courant number or grid; low-dissipation runs (and multicomponentFluid fine) show the same failure/galloping trajectory. Mechanism: 0D ignition OF14 vs Cantera within 0.15% (runs/chem0d); ODE tolerance: no effect (runs/znd/multicomponentFluid-upwind-n22727-cj-tight-4us)."
+}

@@ -1,0 +1,31 @@
+[
+ {
+  "case": "runs/znd/detonationFluid-vanLeer-n4545-sf-coarse",
+  "cells": 4545,
+  "dx_um": 4.400440044004401,
+  "cells_per_lind": 45.306957817598146,
+  "D_CJ": 1975.1746278769756,
+  "t_end_us": 19.0,
+  "x_shock_mm": [
+   14.0,
+   6.475247525,
+   14.22442244,
+   6.475247525
+  ],
+  "speed_peaks_us": [
+   1.4000000000000001,
+   4.700000000000001
+  ],
+  "speed_peak_values": [
+   2217.198827876974,
+   1615.8053612103083
+  ],
+  "D_whole_run": 1579.135023929607,
+  "complete_cycles": 0,
+  "gate_within_1pct": false,
+  "note": "fewer than one complete cycle after start-up",
+  "step_Tmax_K": 3088.4538183,
+  "steps_sampled": 92096,
+  "steps_at_3500K": 0
+ }
+]

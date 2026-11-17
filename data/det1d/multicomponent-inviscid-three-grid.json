@@ -1,0 +1,53 @@
+{
+  "time_end_s": 9.3e-06,
+  "shock_probe_threshold_pa": 200000,
+  "CJ_m_s": 1975.1746278769756,
+  "note": "Pressure crossing first sampled at probes. First and last 11-probe subwindows deliberately omit 15.5 mm center. No equal speed or grid convergence assumed. All domains have per-step Tmax <3500 K and no JANAF clipping warnings; intermediate solver states not directly instrumented.",
+  "results": [
+    {
+      "cells": 5682,
+      "fit_full_10_to_21mm": {
+        "count": 23,
+        "speed_m_s": 1996.4108305724242
+      },
+      "fit_first_10_to_15mm": {
+        "count": 11,
+        "speed_m_s": 2006.8242417638164
+      },
+      "fit_last_16_to_21mm": {
+        "count": 11,
+        "speed_m_s": 1989.1974247535177
+      }
+    },
+    {
+      "cells": 11364,
+      "fit_full_10_to_21mm": {
+        "count": 23,
+        "speed_m_s": 1992.441326390096
+      },
+      "fit_first_10_to_15mm": {
+        "count": 11,
+        "speed_m_s": 2000.7456777923444
+      },
+      "fit_last_16_to_21mm": {
+        "count": 11,
+        "speed_m_s": 1986.3952885013332
+      }
+    },
+    {
+      "cells": 22727,
+      "fit_full_10_to_21mm": {
+        "count": 23,
+        "speed_m_s": 1616.8267433973526
+      },
+      "fit_first_10_to_15mm": {
+        "count": 11,
+        "speed_m_s": 1725.6348842392085
+      },
+      "fit_last_16_to_21mm": {
+        "count": 11,
+        "speed_m_s": 1541.664863067782
+      }
+    }
+  ]
+}

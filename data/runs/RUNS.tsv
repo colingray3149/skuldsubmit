@@ -1,0 +1,62 @@
+utc	wp	run	host	status	wall_s	summary
+2026-11-15T03:19:46Z	b3	realm-planardet	mini	ok	209	11 files 3,346,428,010 B, sha256=HF LFS oids; val npz data (50,13,832,384) f32 loads; mixture H2:O2:N2=x:1:7 at P0 100 kPa (REALM paper Supp. PlanarDet2d, confirmed from fresh cells)
+2026-11-15T03:19:46Z	b3	rde-72	mini	ok	69	7 files 1,202,647,556 B; npz loads (72,20,6,150,300) but all 12 real cases are all-zero, synthetic ~1e-10 noise: no usable fields; fill-states.csv 12 rows from CSV
+2026-11-15T03:19:46Z	b3	zenodo-21697987	mini	ok	49	zip 31,227,429 B MD5 ok; 40 members; read bennewitz_afrl_2019.csv; licence conflict Zenodo CC-BY-4.0 vs bundled MIT
+2026-11-15T03:19:46Z	b3	the-well-euler	mini	ok	175	valid chunk_40 gamma1.4 Dry_air_20, 5,295,335,348 B, sha256=HF LFS oid; HDF5 t0_fields/density (10,101,512,512) f32 reads
+2026-11-15T03:19:46Z	b3	detonationFoam-OF14	mini	ok	3	TXChris fork, 4 branches OF-14 09c9bfc, cluster-validation 647acf6, perf-critique b624458, V2.0_OF8 f75983e; fsck ok
+2026-11-15T03:19:46Z	b3	openfoam-14	mini	ok	12	OpenFOAM-14 detached at 64cfdf54 (master unmoved), 406 MB with .git; fsck ok
+2026-11-15T03:24:26Z	b4	trial	mini	ok	44	32 runs, waves 1:4 2:9 3:9 4:4 5:3 6:1 7:1 9:1, 0 failed
+2026-11-15T07:50:37Z	b3	zenodo-18886925	mini	ok	1400	data.zip 3,383,971,110 B MD5 058d7132 ok (resumed after session kill, transient unit); 28 members; BD0038.mat pressureProbeMat (8,150034) f32 reads
+2026-11-15T07:52:08Z	b4	full	mini	ok	355	2048 runs, 0 failed; waves 0:57 1:240 2:557 3:459 4:304 5:227 6:104 7:54 8:22 9:10 10:10 11:3 12:1; settled 1421, clean 1342; eye check settled 70/74
+2026-11-15T07:55:57Z	b1	refcalc	mini	ok	153	49 mixtures x 2 mechs + C-3 grid (63 pts); pair D_CJ 0.5% fails 6 lean N2 rows (Mevel NO), all else pass; RDE-72 cj = vN states
+2026-11-15T13:01:03Z	b2	sod-esi-co0.2	mini	fail	60	ESI2512 rhoCentralFoam Sod 250-4000 cells maxCo 0.2: ok to 1000 cells, post-shock oscillation +-20% at 2000/4000 (L1 grows, order <0)
+2026-11-15T13:01:03Z	b2	sod-esi-co0.1	mini	ok	120	ESI2512 Sod maxCo 0.1: shock/contact <=0.25 cells, fan tail 0.98, fan head -1.06 cells at 1000; rho L1 order 0.73-0.87
+2026-11-15T17:56:15Z	b2	calib-mini-clean	mini	ok	300	ESI2512 rhoCentralFoam 15 runs: serial c_loop 0.19-0.38 core-us/cell-step
+2026-11-15T17:56:15Z	b2	calib-pc-clean	mini	ok	600	ESI2512 15 runs on pc (3700X): serial c_loop 0.33-0.64; pc/mini 1.7-2.1x
+2026-11-15T17:56:15Z	b2	calib-mini-during-build	mini	ok	300	same 15 runs during OF-14 build: 1.1-1.7x slower (median 1.35)
+2026-11-15T18:06:40Z	b5	sod-of14-co0.2	mini	fail	36	OF-14 shockFluid Sod 250-4000: shock 0.63 contact -0.35 fan head 0.65 cells at 1000 ok; fan tail 1.31 cells (tol 1); rho L1 order 0.70-0.74 ok; no oscillation
+2026-11-15T18:06:40Z	b5	sod-of14-co0.1	mini	fail	60	same at maxCo 0.1: fan tail 1.13 cells (tol 1), all else within 0.44; order 0.72-0.79
+2026-11-15T23:18:45Z	b5	det1d-coarse-finish	mini	fail	251.043	5682 cells r8; c=26.6378 c_loop=26.0395 core-us/cell-step; 29-probe fit D=2320.30 m/s vs CJ=1975.17 (+17.47%); JANAF temperature clipped at 3500 K; reconstructed full fields 9.5 us; Qdot proxy not ZND induction gate
+2026-11-15T23:05:49Z	b5	det1d-drv30-L60	mini	ok	909.445	6818 cells r4, 60 mm diagnostic tube 30 atm driver, c=32.8301 c_loop=32.1900; diagnostic not CJ-qualified
+2026-11-15T23:06:17Z	b5	det1d-drv90-L60	mini	ok	937.145	6818 cells r4, 60 mm diagnostic tube 90 atm driver, c=32.5541 c_loop=31.9153; diagnostic not CJ-qualified
+2026-11-15T23:09:19Z	b5	det1d-drv15-L60	mini	ok	1118.280	6818 cells r4, 60 mm diagnostic tube 15 atm driver, c=29.3388 c_loop=28.9190; diagnostic not CJ-qualified
+2026-11-15T23:30:54Z	b5	det1d-coarse-pc	pc	ok	875.784	5682 cells r4 13273 steps; c=46.4501 c_loop=45.9318 core-us/cell-step; cost measurement only not CJ validated, pre-GPU; benchmark, timing and probes copied locally
+2026-11-15T23:39:38Z	b5	det1d-medium	mini	fail	1174.42	11364 cells r8 26954 steps; solver exit 0 at shock stop, D=2241.04 m/s (+13.46% CJ), JANAF T clipped; c=30.6732 c_loop=27.7195, concurrent CLI build ~25s; wrapper exited 2 because script was modified during execution, benchmark recovered from time.txt
+2026-11-15T23:40:00Z	b5	dmr-initial	mini	fail	4.898	120 per unit failed decomposition; archived setup attempt
+2026-11-15T23:45:28Z	b5	dmr-vanAlbada	mini	fail	282.917	8 ranks: 120 completed with pathological density/ridge; 240 FPE in shockFluid fluxPredictor sqrt at t=0.1113352468; no valid triple point or GCI
+2026-11-15T23:51:19Z	b5	dmr-Minmod	mini	fail	306.135	8 ranks: 120 completed with pathological density/ridge; 240 FPE in shockFluid fluxPredictor sqrt at t=0.116556236; no valid triple point or GCI; timing may overlap Rust build
+2026-11-15T23:51:40Z	b6	runtime-gate	mini	fail	3.172	no /usr/bin/time; no solver started
+2026-11-15T23:52:02Z	b6	runtime-gate2	mini	fail	7.460	GCC15 GLIBC_2.44 mismatch; no solver started
+2026-11-15T23:52:29Z	b6	runtime-gate3	mini	ok	22.887	fork utility slab/localized/wedge refine-unrefine, integral relative tolerance 2e-10; refined restart refused, coarsened restart and re-refine pass within utility, coupled solver restart not established
+2026-11-15T23:53:06Z	b6	sod	mini	fail	6.061	blockMesh invalid opposed symmetryPlane faces; before solve
+2026-11-15T23:53:34Z	b6	sod2	mini	partial	46.263	three solves succeeded; original analysis duplicate coordinates failed, corrected offline; AMR inside assumed-order two-grid GCI, not measured three-grid GCI; 16 high-nonorthogonal faces; build overlap
+2026-11-16T00:09:00Z	b5	det1d-multicomponent-upwind	mini	fail	858.39	5682 cells r8 Euler/upwind transonic PIMPLE Co0.1, 37343 steps c_loop=31.7767; D=2270.28 vs CJ 1975.17 (+14.94%); laminar transport unlike inviscid reference; concurrent flake build early
+2026-11-16T01:11:08Z	b5	strip-coarse-initial	mini	fail	3.989	blockMesh rejected a single symmetryPlane patch containing opposed faces; before solve; corrected to symmetry for retry
+2026-11-16T01:11:54Z	b5	strip-coarse2	mini	ok	9.20617	31.25x10mm 125x40 symmetry-walled reacting strip, 5us, r8 305 steps; c=48.2947 c_loop=29.6031; tube driver not full-channel RDE
+2026-11-16T00:09:15Z	b6	reacting-amr	mini	fail	5.640	mesh failed opposing symmetryPlane; no solve
+2026-11-16T00:09:58Z	b6	reacting-symmetry	mini	fail	10.332	field boundary type mismatch; no solve
+2026-11-16T01:10:54Z	b6	reacting-symmetry2	mini	partial	3640.158	stopped at 3.6/10 us; ~40k cells 2813 refine events 96 unrefinement passes; JANAF temperature clipping, unqualified reference
+2026-11-16T01:11:25Z	b6	reacting-restart-active	mini	ok	2.556	coupled foamRun restart at 3us refused active reversible splits as expected
+2026-11-16T01:12:33Z	b5	strip-fine	mini	ok	27.3225	31.25x10mm 250x80 symmetry-walled reacting strip, 5us, r8 305 steps; c=35.8328 c_loop=30.8037; tube driver not full-channel RDE
+2026-11-16T01:13:01Z	b5	full-channel	mini	fail	14.646	W4 125x240 periodic RDE, 8 ranks; mesh passed but foamRun FPE in totalPressure dynamicPressure pow; no valid full-channel cost or stable wave count
+2026-11-16T02:17:35Z	b5	det1d-fine	mini	fail	3833.62	22727 cells r8 55849 steps; D=2179.62 m/s +10.35% CJ; three-grid errors decrease monotonically but fail 1% gate; clipped T; c=24.1625 c_loop=24.0785, 4.9G peak
+2026-11-16T02:29:35Z	b5	znd-preflight	mini	fail	1.408	fresh temperature recovered 299.99999999999994K vs 300K minimum due to roundoff; no solver started
+2026-11-16T02:29:55Z	b5	znd-preflight2	mini	fail	1.324	confirmed fresh-state inversion roundoff; corrected by retaining exact fresh pressure and temperature
+2026-11-16T02:30:10Z	b5	znd-preflight3	mini	ok	1.447	matched Burke CJ profile D=1975.1746, initial Tmax2971.433K, RH residual <=9.39e-7; physically valid thermo range 300-3500K
+2026-11-16T02:33:34Z	b5	znd-coarse	mini	fail	184.847	5682 cells r8; 2033.24m/s +2.94% CJ; 14 cells at 3500K final; c=23.4107; 45.31 cells/Lind
+2026-11-16T02:46:20Z	b5	znd-medium	mini	fail	736.653	11364 cells r8; 2037.92m/s +3.177% CJ; 174 cells at 3500K final; c=22.6993; 90.63 cells/Lind
+2026-11-16T03:45:44Z	b5	znd-fine	mini	fail	3546.01	22727 cells r8; 1982.48m/s +0.370% numerical speed, 5561 cells capped 3500K so physical criterion fails; 181.24 cells/Lind, nonmonotone errors; c=26.8698 and mini build overlap
+2026-11-16T03:49:44Z	b5	znd-Minmod-coarse	mini	fail	217.671	5682 r8 Co0.4; D=2003.89 (+1.454% CJ), Tmax over all 9515 steps=3468.24K, zero cap; c=32.2092
+2026-11-16T04:03:04Z	b5	znd-Minmod-medium	mini	fail	756.927	11364 r8 Co0.4; D=1912.84 (-3.156% CJ), Tmax over all 19914 steps=3297.53K, zero cap; c=26.7580
+2026-11-16T09:24:18Z	b5	znd-co01-launch	mini	fail	1.2	launcher PATH lacked numpy Python; no solver started; case dir removed
+2026-11-16T09:31:04Z	b5	chem0d-vN	mini	ok	3	0D const-p ignition, OF14 multicomponentFluid with converted Burke files vs Cantera source yaml at vN 1538.8K 28bar: tau(max dT/dt) 0.5342 vs 0.5334us (+0.15%), Tend 3157.2 vs 3156.2K; mechanism conversion verified kinetically
+2026-11-16T09:31:04Z	b5	chem0d-1300K	mini	ok	3	same at 1300K 20bar: tau 3.876 vs 3.879us (-0.08%); chem0d_compare.py
+2026-11-16T09:51:21Z	b5	znd-co01-coarse	mini	fail	1579.92	5682 r4 vanLeer Co0.1 (was 0.4); 35556 steps; D=1996.44 (+1.077% CJ) fit 10-24mm, halves 2005.02/1990.77; per-step Tmax 3240.40K, 0/35557 steps at 3500K (unclipped; Co0.4 same case +2.94% clipped); c=31.281 c_loop=31.102; misses 1% by start-up overdrive tail
+2026-11-16T09:53:48Z	b5	znd-mc-tight-4us	mini	ok	4638	22727 r8 multicomponentFluid inviscid, seulex absTol1e-10/relTol1e-8 (ref 1e-6/1e-3) to 4us, 58377 steps; vs reference at 1-4us: identical shock positions (12.9004mm at 4us), max|dT|<=0.071K, max rel dp<=1.7e-4; front still decays (local probe speed 2348 m/s at 7mm -> 1692 m/s at 13mm), OH gap 0.444mm at 4us in both: chemistry ODE tolerance is NOT the cause of fine-grid decay; Tmax 3124.73K
+2026-11-16T11:01:35Z	b5	znd-co01-medium	mini	fail	4179.56	11364 r4 vanLeer Co0.1; 71962 steps; D=1554.99 (-21.27% CJ) fit 10-24mm, halves 1655.14/1489.02; per-step Tmax 3242.30K, 0/71963 at 3500K (unclipped); start-up overdrive +21% then monotone decay to -25.6% at 22mm, final post-shock T~1000K with flame 2-4mm behind (decoupled); trajectory matches multicomponentFluid fine within ~2-3%; c=20.444 c_loop=20.364
+2026-11-16T11:39:00Z	b5	znd-co005-coarse	mini	fail	2187.66	5682 r4 vanLeer Co0.05; 70388 steps; D=1907.40 (-3.431% CJ), halves 1992.36/1776.46; per-step Tmax 3222.03K, 0/70389 at 3500K; near-CJ to 17mm then decays to -17.7% at 24mm: coarse speed not Courant-converged (0.4 +2.94% clipped, 0.1 +1.08%, 0.05 -3.43%); c=21.880 c_loop=21.765 (machine otherwise quiet)
+2026-11-16T14:46:16Z	b5	znd-sf-medium-preflight	mini	fail	3	shock-frame initializer variable clash (w reused by csv writer) after writing fields; no solver started; case removed, fixed
+2026-11-16T18:51:37Z	b5	znd-sf-medium	mini	fail	14628	shock-attached frame (fresh inflow -D_CJ at x=20mm, shock at 14mm), 9091 cells 2.2um (90.6/Lind) r4 vanLeer Co0.1, stopped at 22.8us by hand after the flame left the outflow (~20.2us); 317643 steps. No complete cycle: start-up peak 2181 m/s at 1.9us, weak bump 1649 at 5.8us, then failure: lab-equivalent mean D 1526.2 m/s 2-19us (-22.7%), 1414.7 last 4us; post-shock T~1000K, flame receding 0.3-0.35 mm/us. Multi-cycle 1% criterion not evaluable -> fail; per-step Tmax 3104.40K, 0/317643 at 3500K; c_loop=20.173
+2026-11-16T19:28:17Z	b5	znd-sf-coarse	mini	fail	2259	shock-attached frame as znd-sf-medium, 4545 cells 4.4um (45.3/Lind) r4 vanLeer Co0.1, stopped by hand at 20.5us at flame exit; 92096 steps. No complete cycle: start-up peak 2217 m/s at 1.4us, bump 1616 at 4.7us, then failure; mean D 1519.6 m/s 2-19us (-23.1%; medium 1526.2, two grids within 0.4%), 1428.4 last 4us; per-step Tmax 3088.45K, 0/92096 at 3500K; c_loop=21.512
+2026-11-16T21:33:25Z	b5	znd-ar7-coarse	mini	ok	1038.74	1D CJ gate mixture 2H2:O2:7Ar 1atm 300K (Colin), Burke D_CJ 1691.12 m/s; lab frame matched CJ/ZND start, 5682 cells 4.4um (17.9/Lind) r4 vanLeer Co0.1; 32990 steps; D=1696.14 (+0.296%) fit 10-24mm 29 probes, halves 1697.46/1693.91; per-step Tmax 3164.21K, 0/32991 at 3500K; c=22.166 c_loop=22.010
+2026-11-16T23:50:27Z	b5	znd-ar7-medium	mini	ok	4035.28	2H2:O2:7Ar 1atm 300K as znd-ar7-coarse, 11364 cells 2.2um (35.8/Lind) r4 vanLeer Co0.1; 67324 steps; D=1695.72 (+0.272%) fit 10-24mm 29 probes, halves 1697.86/1693.84, mild local pulsation +-1.7%; per-step Tmax 3201.15K, 0/67325 at 3500K; c=21.098 c_loop=20.938. With coarse +0.296%: 1D CJ gate PASSED on both grids, error decreasing

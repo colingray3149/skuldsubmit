@@ -1,0 +1,64 @@
+{
+ "ref": {
+  "id": "2h2-o2-7ar-1atm",
+  "mech": "Burke2012.yaml",
+  "d_cj": 1691.1234033375347,
+  "l_ind": 7.865115598803529e-05
+ },
+ "cases": [
+  {
+   "case": "runs/znd/detonationFluid-vanLeer-n5682-ar7",
+   "cells": 5682,
+   "dx": 4.399859204505456e-06,
+   "cells_per_lind": 17.875834732960662,
+   "probes_fitted": 29,
+   "D": 1696.1362107814,
+   "D_err_pct": 0.2964187849314978,
+   "L_ind_heat_release_proxy": 2.6399155227035953e-05,
+   "L_proxy_err_pct": -66.43513385734357,
+   "p_peak": 3189692.15,
+   "shock_x": 0.023906634987680395,
+   "field_time": 1.11e-05,
+   "D_first_half": 1697.4608861364452,
+   "D_second_half": 1693.9095216292203,
+   "fit_window_mm": [
+    10.0,
+    24.0
+   ],
+   "step_Tmax_K": 3164.2064258,
+   "steps_sampled": 32991,
+   "steps_at_3500K": 0,
+   "gate_D_within_1pct": true
+  },
+  {
+   "case": "runs/znd/detonationFluid-vanLeer-n11364-ar7",
+   "cells": 11364,
+   "dx": 2.199929602252728e-06,
+   "cells_per_lind": 35.751669465921324,
+   "probes_fitted": 29,
+   "D": 1695.716581318423,
+   "D_err_pct": 0.27160513371309847,
+   "L_ind_heat_release_proxy": 2.6399155227032484e-05,
+   "L_proxy_err_pct": -66.43513385734798,
+   "p_peak": 3323824.492,
+   "shock_x": 0.023881335797254488,
+   "field_time": 1.11e-05,
+   "D_first_half": 1697.8638863594288,
+   "D_second_half": 1693.837229747957,
+   "fit_window_mm": [
+    10.0,
+    24.0
+   ],
+   "step_Tmax_K": 3201.1523379,
+   "steps_sampled": 67325,
+   "steps_at_3500K": 0,
+   "gate_D_within_1pct": true
+  }
+ ],
+ "pass": {
+  "D_within_1pct_both_grids": true,
+  "error_decreases_with_refinement": true,
+  "unclipped": true
+ },
+ "note": "2026-11-16 1D CJ gate on 2H2:O2:7Ar 1 atm 300 K (Colin's decision; Kwak D1-2). detonationFluid Kurganov/vanLeer, Co 0.1, 4 ranks, lab frame matched CJ/ZND start (shock at 5 mm), probe fit 10-24 mm. D_CJ from B1 Burke (same mechanism/thermo). Unchanged 1% criterion on both grids. H2-air phi 1 1 atm 1D is a recorded known-unstable case, not a gate."
+}

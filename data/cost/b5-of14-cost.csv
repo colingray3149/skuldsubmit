@@ -1,0 +1,15 @@
+host,case,cells,ranks,steps,wall_s,c_core_us_per_cell_step,c_loop
+mini,"detonationFluid, H2-air 1D, 90 atm driver, vanLeer, Co 0.4",5682,8,13269,251.043,26.638,26.040
+mini,"detonationFluid, H2-air 1D, vanLeer, medium grid",11364,8,26954,1174.42,30.673,27.720
+mini,"detonationFluid, H2-air 1D, vanLeer, fine grid",22727,8,55849,3833.62,24.163,24.079
+pc,"detonationFluid, H2-air 1D, 90 atm driver, vanLeer, Co 0.4",5682,4,13273,875.784,46.450,45.932
+mini,"multicomponentFluid, H2-air 1D, Euler/upwind Co 0.1, laminar",5682,8,37343,858.39,32.364,31.777
+mini,"detonationFluid, reacting symmetry-wall strip, 0.25 mm",5000,8,305,9.206,48.295,29.603
+mini,"detonationFluid, reacting symmetry-wall strip, 0.125 mm",20000,8,305,27.323,35.833,30.804
+mini,"detonationFluid, H2-air 1D CJ/ZND-matched, vanLeer, Co 0.1 (2026-11-16)",5682,4,35556,1579.92,31.281,31.102
+mini,"detonationFluid, H2-air 1D CJ/ZND-matched, vanLeer, Co 0.1, medium (2026-11-16)",11364,4,71962,4179.56,20.444,20.364
+mini,"detonationFluid, H2-air 1D CJ/ZND-matched, vanLeer, Co 0.05 (2026-11-16)",5682,4,70388,2187.66,21.880,21.765
+mini,"detonationFluid, H2-air 1D shock-attached frame, vanLeer, Co 0.1, 2.2 µm (2026-11-16)",9091,4,317643,14628,20.263,20.173
+mini,"detonationFluid, H2-air 1D shock-attached frame, vanLeer, Co 0.1, 4.4 µm (2026-11-16)",4545,4,92096,2259,21.588,21.512
+mini,"detonationFluid, 2H2:O2:7Ar 1D CJ/ZND-matched, vanLeer, Co 0.1 (2026-11-16, gate)",5682,4,32990,1038.74,22.166,22.010
+mini,"detonationFluid, 2H2:O2:7Ar 1D CJ/ZND-matched, vanLeer, Co 0.1, medium (2026-11-16, gate)",11364,4,67324,4035.28,21.098,20.938

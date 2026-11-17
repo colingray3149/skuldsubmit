@@ -1,0 +1,31 @@
+[
+ {
+  "case": "runs/znd/detonationFluid-vanLeer-n9091-sf-medium",
+  "cells": 9091,
+  "dx_um": 2.1999780002199976,
+  "cells_per_lind": 90.62388416276893,
+  "D_CJ": 1975.1746278769756,
+  "t_end_us": 19.0,
+  "x_shock_mm": [
+   13.999559999999999,
+   6.526234738,
+   14.21515785,
+   6.526234738
+  ],
+  "speed_peaks_us": [
+   1.9,
+   5.800000000000001
+  ],
+  "speed_peak_values": [
+   2180.5059112103077,
+   1648.8445612103085
+  ],
+  "D_whole_run": 1581.8417193506598,
+  "complete_cycles": 0,
+  "gate_within_1pct": false,
+  "note": "fewer than one complete cycle after start-up",
+  "step_Tmax_K": 3104.401519,
+  "steps_sampled": 317643,
+  "steps_at_3500K": 0
+ }
+]

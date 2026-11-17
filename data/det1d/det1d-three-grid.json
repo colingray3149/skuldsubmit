@@ -1,0 +1,58 @@
+{
+ "ref": {
+  "id": "h2air-phi1-1atm-300K",
+  "mech": "Burke2012.yaml",
+  "d_cj": 1975.1746278769756,
+  "l_ind": 0.00019937055212103318
+ },
+ "cases": [
+  {
+   "case": "runs/det1d/detonationFluid-vanLeer-n5682-finish",
+   "cells": 5682,
+   "dx": 4.399859204505456e-06,
+   "cells_per_lind": 45.31293908606842,
+   "probes_fitted": 29,
+   "D": 2320.29684168863,
+   "D_err_pct": 17.4729975233942,
+   "L_ind_heat_release_proxy": 1.7599436818022812e-05,
+   "L_proxy_err_pct": -91.1724993331319,
+   "p_peak": 6884629.34,
+   "shock_x": 0.02391983456529391,
+   "field_time": 9.5e-06
+  },
+  {
+   "case": "runs/det1d/detonationFluid-vanLeer-n11364-medium",
+   "cells": 11364,
+   "dx": 2.199929602252728e-06,
+   "cells_per_lind": 90.62587817213684,
+   "probes_fitted": 29,
+   "D": 2241.0444754561236,
+   "D_err_pct": 13.46057426147273,
+   "L_ind_heat_release_proxy": 1.9799366420273495e-05,
+   "L_proxy_err_pct": -90.06906174977448,
+   "p_peak": 7207892.083,
+   "shock_x": 0.0238109380499824,
+   "field_time": 9.7e-06
+  },
+  {
+   "case": "runs/det1d/detonationFluid-vanLeer-n22727-fine",
+   "cells": 22727,
+   "dx": 1.100013200158402e-06,
+   "cells_per_lind": 181.2437815221888,
+   "probes_fitted": 29,
+   "D": 2179.6168884751264,
+   "D_err_pct": 10.350591674919215,
+   "L_ind_heat_release_proxy": 2.3100277203324387e-05,
+   "L_proxy_err_pct": -88.41339558045625,
+   "p_peak": 5646667.291,
+   "shock_x": 0.023914836978043738,
+   "field_time": 1e-05
+  }
+ ],
+ "pass": {
+  "D": false,
+  "L_ind": null,
+  "monotone_D": true
+ },
+ "note": "L_ind gate unevaluated: Qdot peak is not the ZND thermicity peak."
+}
