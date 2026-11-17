@@ -1,0 +1,22 @@
+// Source: bg/b5-of14/runs/sod/n1000/constant/momentumTransport
+// Sod shock tube on OpenFOAM-14 shockFluid, 1,000 cells, maxCo 0.2 (B5 Sod row).
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  14
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      momentumTransport;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+simulationType  laminar;
+
+
+// ************************************************************************* //

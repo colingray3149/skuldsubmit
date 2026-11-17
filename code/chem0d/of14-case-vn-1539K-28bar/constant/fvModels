@@ -1,0 +1,24 @@
+// Source: bg/b5-of14/runs/chem0d/vn-1539K-28bar/constant/fvModels
+// 0D constant-pressure H2-air ignition at the von Neumann state, OpenFOAM-14 multicomponentFluid, Burke 2012.
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  14
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      fvModels;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+zeroDimensionalFixedPressure1
+{
+    type            zeroDimensionalFixedPressure;
+}
+
+// ************************************************************************* //

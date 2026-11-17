@@ -1,0 +1,49 @@
+// Source: bg/b5-of14/runs/sod/n1000/constant/physicalProperties
+// Sod shock tube on OpenFOAM-14 shockFluid, 1,000 cells, maxCo 0.2 (B5 Sod row).
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  14
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      physicalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+thermoType
+{
+    type            hePsiThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState perfectGas;
+    specie          specie;
+    energy          sensibleInternalEnergy;
+}
+
+mixture
+{
+    specie
+    {
+        molWeight       28.96;
+    }
+    thermodynamics
+    {
+        Cp              1004.5;
+        hf              2.544e+06;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+
+// ************************************************************************* //

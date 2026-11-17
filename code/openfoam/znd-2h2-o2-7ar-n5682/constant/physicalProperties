@@ -1,0 +1,36 @@
+// Source: bg/b5-of14/runs/znd/detonationFluid-vanLeer-n5682-ar7/constant/physicalProperties
+// 1D 2H2:O2:7Ar ZND tube on detonationFluid (Kurganov, vanLeer, maxCo 0.1), 5,682 cells: the gate case.
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  14                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      physicalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+thermoType
+{
+    type            hePsiThermo;
+    mixture         multicomponentMixture;
+    transport       sutherland;
+    thermo          janaf;
+    energy          sensibleInternalEnergy;
+    equationOfState perfectGas;
+    specie          specie;
+}
+
+defaultSpecie AR;
+
+#include "$FOAM_CASE/constant/foam/species.foam"
+#include "$FOAM_CASE/constant/foam/thermo.foam"
+
+
+// ************************************************************************* //

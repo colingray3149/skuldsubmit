@@ -1,0 +1,49 @@
+// Source: bg/b5-of14/runs/sod/n1000/system/fvSolution
+// Sod shock tube on OpenFOAM-14 shockFluid, 1,000 cells, maxCo 0.2 (B5 Sod row).
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  14
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    "(rho|rhoU|rhoE).*"
+    {
+        solver          diagonal;
+    }
+
+    "U.*"
+    {
+        solver          smoothSolver;
+        smoother        GaussSeidel;
+        nSweeps         2;
+        tolerance       1e-09;
+        relTol          0.01;
+    }
+
+    "e.*"
+    {
+        $U;
+        tolerance       1e-10;
+        relTol          0;
+    }
+}
+
+PIMPLE
+{
+    nOuterCorrectors 2;
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,4 @@
+// Source: bg/b5-of14/runs/chem0d/vn-1539K-28bar/constant/foam/species.foam
+// 0D constant-pressure H2-air ignition at the von Neumann state, OpenFOAM-14 multicomponentFluid, Burke 2012.
+species         13 ( H H2 O OH H2O O2 HO2 H2O2 N2 AR HE CO CO2 );
+

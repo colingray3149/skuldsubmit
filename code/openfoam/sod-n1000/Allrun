@@ -1,0 +1,13 @@
+#!/bin/sh
+// Source: bg/b5-of14/runs/sod/n1000/Allrun
+// Sod shock tube on OpenFOAM-14 shockFluid, 1,000 cells, maxCo 0.2 (B5 Sod row).
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+runApplication blockMesh
+runApplication foamRun
+./createGraphs
+
+#------------------------------------------------------------------------------

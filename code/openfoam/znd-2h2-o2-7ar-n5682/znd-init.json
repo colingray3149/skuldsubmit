@@ -1,0 +1,51 @@
+{
+  "mechanism_sha256": "27310c1a645820d83a55357dab220c8ffd7a1599aa242bfa9ab28aca88447949",
+  "profile_sha256": "e1e8a5a503f959d7e1fec3ed8d1c25667b4e556732a1cc2d56e497b5f898b0a4",
+  "initializer_sha256": "e8495e3e0397de82b22a798ce8fd8a4731e5413439c6af90da1182bed0a0ed25",
+  "cantera_version": "3.2.0",
+  "D_CJ_m_s": 1691.1234033375347,
+  "shock_x_m": 0.005,
+  "length_m": 0.025,
+  "cells": 5682,
+  "fresh_U_m_s": -0.0,
+  "frame_velocity_m_s": 0.0,
+  "vn_U_lab_m_s": 1285.377737837509,
+  "shock_RH_relative_residual": {
+    "mass": 0.0,
+    "momentum": 9.928898824956547e-07,
+    "energy": 6.910013252957857e-08,
+    "species": 0.0
+  },
+  "T_source_min_K": 300.0,
+  "T_source_max_K": 3092.6695871901024,
+  "T_cell_min_K": 300.0,
+  "T_cell_max_K": 3092.6694369690563,
+  "thermo_common_range_K": [
+    300.0,
+    3500.0
+  ],
+  "znd_coverage_m": 1.9005834456582866,
+  "znd_end_thermicity_relative": 6.313502168016824e-15,
+  "induction_length_m": 7.865115667899545e-05,
+  "arguments": {
+    "case": ".",
+    "mechanism": "repos/sdtoolbox-harryzhou-mirror/data/Burke2012.yaml",
+    "mechanism_sha256": "27310c1a645820d83a55357dab220c8ffd7a1599aa242bfa9ab28aca88447949",
+    "method": "Radau",
+    "n": 5682,
+    "quadrature": 8,
+    "length": 0.025,
+    "shock_x": 0.005,
+    "p0": 101325.0,
+    "t0": 300.0,
+    "phi": 1.0,
+    "t_end": 0.002,
+    "max_step": 1e-05,
+    "rtol": 1e-08,
+    "atol": 1e-10,
+    "rh_tol": 1e-05,
+    "end_thermicity_rel": 0.001,
+    "shock_frame": false,
+    "composition": "H2:2 O2:1 AR:7"
+  }
+}

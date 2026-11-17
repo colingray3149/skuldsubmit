@@ -1,0 +1,6 @@
+// Source: bg/b5-of14/runs/znd/detonationFluid-vanLeer-n5682-ar7/system/decomposeParDict
+// 1D 2H2:O2:7Ar ZND tube on detonationFluid (Kurganov, vanLeer, maxCo 0.1), 5,682 cells: the gate case.
+FoamFile{format ascii;class dictionary;object decomposeParDict;}
+numberOfSubdomains 4;
+decomposer simple;
+simpleCoeffs{n (4 1 1);}

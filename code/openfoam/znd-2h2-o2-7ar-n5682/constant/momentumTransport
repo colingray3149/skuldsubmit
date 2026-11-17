@@ -1,0 +1,23 @@
+// Source: bg/b5-of14/runs/znd/detonationFluid-vanLeer-n5682-ar7/constant/momentumTransport
+// 1D 2H2:O2:7Ar ZND tube on detonationFluid (Kurganov, vanLeer, maxCo 0.1), 5,682 cells: the gate case.
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  14                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      momentumTransport;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+simulationType  laminar;
+
+
+// ************************************************************************* //
