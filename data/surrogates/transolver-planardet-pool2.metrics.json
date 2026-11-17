@@ -1,0 +1,316 @@
+{
+ "per_seed": {
+  "11": {
+   "val": {
+    "available_rollout_steps": 49.0,
+    "front_pos_err_cells_final": 22.177083333333332,
+    "front_pos_err_cells_mean": 9.9953231292517,
+    "front_pos_err_mm_mean": 0.499766156462585,
+    "mass_drift_final": 0.11032918885189912,
+    "mass_drift_max": 0.1228346072015395,
+    "nonfinite": 0.0,
+    "overshoot_rho_final": 0.3371973720772617,
+    "overshoot_rho_max": 0.8041097488006238,
+    "overshoot_t_final": 1.3250983226258697,
+    "overshoot_t_max": 1.3250983226258697,
+    "positivity_violations": 1229064.0,
+    "realm_full13_carried_history_chemical": 6.457999816727919,
+    "realm_full13_carried_history_corr": 0.7730786567713177,
+    "realm_full13_carried_history_density": 23.26044853692082,
+    "realm_full13_carried_history_error": 165.12356255348993,
+    "realm_full13_carried_history_pressure": 83.96685990568048,
+    "realm_full13_carried_history_temperature": 6.643665523288404,
+    "realm_full13_carried_history_velocity": 44.79458877087232,
+    "realm_state_chemical": 6.457999816727919,
+    "realm_state_corr": 0.8033467184177587,
+    "realm_state_density": 23.26044853692082,
+    "realm_state_error": 81.15670264780947,
+    "realm_state_temperature": 6.643665523288404,
+    "realm_state_velocity": 44.79458877087232,
+    "rollout_first_rel_l2_over_half": 24.0,
+    "rollout_rel_l2_10": 0.27686285972595215,
+    "rollout_wall_s": 2.6260507106781006,
+    "n_runs": 1
+   },
+   "test": {
+    "available_rollout_steps": 49.0,
+    "front_pos_err_cells_final": 14.390625,
+    "front_pos_err_cells_mean": 6.06016156462585,
+    "front_pos_err_mm_mean": 0.3030080782312925,
+    "mass_drift_final": 0.028643744554012345,
+    "mass_drift_max": 0.028643744554012345,
+    "nonfinite": 0.0,
+    "overshoot_rho_final": 0.6894543844111131,
+    "overshoot_rho_max": 0.8503411436369536,
+    "overshoot_t_final": 1.4702186140750233,
+    "overshoot_t_max": 1.4702186140750233,
+    "positivity_violations": 998153.0,
+    "realm_full13_carried_history_chemical": 14.402550058018749,
+    "realm_full13_carried_history_corr": 0.7808347100732885,
+    "realm_full13_carried_history_density": 10.6073202140716,
+    "realm_full13_carried_history_error": 122.30967440975937,
+    "realm_full13_carried_history_pressure": 66.06472081825711,
+    "realm_full13_carried_history_temperature": 3.861034508867815,
+    "realm_full13_carried_history_velocity": 27.374048810544085,
+    "realm_state_chemical": 14.402550058018749,
+    "realm_state_corr": 0.81233313626326,
+    "realm_state_density": 10.6073202140716,
+    "realm_state_error": 56.244953591502245,
+    "realm_state_temperature": 3.861034508867815,
+    "realm_state_velocity": 27.374048810544085,
+    "rollout_first_rel_l2_over_half": 35.0,
+    "rollout_rel_l2_10": 0.24237418174743652,
+    "rollout_wall_s": 2.7901651859283447,
+    "n_runs": 1
+   },
+   "best_epoch": 33,
+   "best_val_loss": 0.5145432949066162
+  }
+ },
+ "ensemble": {
+  "val": {
+   "available_rollout_steps": {
+    "mean": 49.0,
+    "std": 0.0
+   },
+   "front_pos_err_cells_final": {
+    "mean": 22.177083333333332,
+    "std": 0.0
+   },
+   "front_pos_err_cells_mean": {
+    "mean": 9.9953231292517,
+    "std": 0.0
+   },
+   "front_pos_err_mm_mean": {
+    "mean": 0.499766156462585,
+    "std": 0.0
+   },
+   "mass_drift_final": {
+    "mean": 0.11032918885189912,
+    "std": 0.0
+   },
+   "mass_drift_max": {
+    "mean": 0.1228346072015395,
+    "std": 0.0
+   },
+   "n_runs": {
+    "mean": 1.0,
+    "std": 0.0
+   },
+   "nonfinite": {
+    "mean": 0.0,
+    "std": 0.0
+   },
+   "overshoot_rho_final": {
+    "mean": 0.3371973720772617,
+    "std": 0.0
+   },
+   "overshoot_rho_max": {
+    "mean": 0.8041097488006238,
+    "std": 0.0
+   },
+   "overshoot_t_final": {
+    "mean": 1.3250983226258697,
+    "std": 0.0
+   },
+   "overshoot_t_max": {
+    "mean": 1.3250983226258697,
+    "std": 0.0
+   },
+   "positivity_violations": {
+    "mean": 1229064.0,
+    "std": 0.0
+   },
+   "realm_full13_carried_history_chemical": {
+    "mean": 6.457999816727919,
+    "std": 0.0
+   },
+   "realm_full13_carried_history_corr": {
+    "mean": 0.7730786567713177,
+    "std": 0.0
+   },
+   "realm_full13_carried_history_density": {
+    "mean": 23.26044853692082,
+    "std": 0.0
+   },
+   "realm_full13_carried_history_error": {
+    "mean": 165.12356255348993,
+    "std": 0.0
+   },
+   "realm_full13_carried_history_pressure": {
+    "mean": 83.96685990568048,
+    "std": 0.0
+   },
+   "realm_full13_carried_history_temperature": {
+    "mean": 6.643665523288404,
+    "std": 0.0
+   },
+   "realm_full13_carried_history_velocity": {
+    "mean": 44.79458877087232,
+    "std": 0.0
+   },
+   "realm_state_chemical": {
+    "mean": 6.457999816727919,
+    "std": 0.0
+   },
+   "realm_state_corr": {
+    "mean": 0.8033467184177587,
+    "std": 0.0
+   },
+   "realm_state_density": {
+    "mean": 23.26044853692082,
+    "std": 0.0
+   },
+   "realm_state_error": {
+    "mean": 81.15670264780947,
+    "std": 0.0
+   },
+   "realm_state_temperature": {
+    "mean": 6.643665523288404,
+    "std": 0.0
+   },
+   "realm_state_velocity": {
+    "mean": 44.79458877087232,
+    "std": 0.0
+   },
+   "rollout_first_rel_l2_over_half": {
+    "mean": 24.0,
+    "std": 0.0
+   },
+   "rollout_rel_l2_10": {
+    "mean": 0.27686285972595215,
+    "std": 0.0
+   },
+   "rollout_wall_s": {
+    "mean": 2.6260507106781006,
+    "std": 0.0
+   }
+  },
+  "test": {
+   "available_rollout_steps": {
+    "mean": 49.0,
+    "std": 0.0
+   },
+   "front_pos_err_cells_final": {
+    "mean": 14.390625,
+    "std": 0.0
+   },
+   "front_pos_err_cells_mean": {
+    "mean": 6.06016156462585,
+    "std": 0.0
+   },
+   "front_pos_err_mm_mean": {
+    "mean": 0.3030080782312925,
+    "std": 0.0
+   },
+   "mass_drift_final": {
+    "mean": 0.028643744554012345,
+    "std": 0.0
+   },
+   "mass_drift_max": {
+    "mean": 0.028643744554012345,
+    "std": 0.0
+   },
+   "n_runs": {
+    "mean": 1.0,
+    "std": 0.0
+   },
+   "nonfinite": {
+    "mean": 0.0,
+    "std": 0.0
+   },
+   "overshoot_rho_final": {
+    "mean": 0.6894543844111131,
+    "std": 0.0
+   },
+   "overshoot_rho_max": {
+    "mean": 0.8503411436369536,
+    "std": 0.0
+   },
+   "overshoot_t_final": {
+    "mean": 1.4702186140750233,
+    "std": 0.0
+   },
+   "overshoot_t_max": {
+    "mean": 1.4702186140750233,
+    "std": 0.0
+   },
+   "positivity_violations": {
+    "mean": 998153.0,
+    "std": 0.0
+   },
+   "realm_full13_carried_history_chemical": {
+    "mean": 14.402550058018749,
+    "std": 0.0
+   },
+   "realm_full13_carried_history_corr": {
+    "mean": 0.7808347100732885,
+    "std": 0.0
+   },
+   "realm_full13_carried_history_density": {
+    "mean": 10.6073202140716,
+    "std": 0.0
+   },
+   "realm_full13_carried_history_error": {
+    "mean": 122.30967440975937,
+    "std": 0.0
+   },
+   "realm_full13_carried_history_pressure": {
+    "mean": 66.06472081825711,
+    "std": 0.0
+   },
+   "realm_full13_carried_history_temperature": {
+    "mean": 3.861034508867815,
+    "std": 0.0
+   },
+   "realm_full13_carried_history_velocity": {
+    "mean": 27.374048810544085,
+    "std": 0.0
+   },
+   "realm_state_chemical": {
+    "mean": 14.402550058018749,
+    "std": 0.0
+   },
+   "realm_state_corr": {
+    "mean": 0.81233313626326,
+    "std": 0.0
+   },
+   "realm_state_density": {
+    "mean": 10.6073202140716,
+    "std": 0.0
+   },
+   "realm_state_error": {
+    "mean": 56.244953591502245,
+    "std": 0.0
+   },
+   "realm_state_temperature": {
+    "mean": 3.861034508867815,
+    "std": 0.0
+   },
+   "realm_state_velocity": {
+    "mean": 27.374048810544085,
+    "std": 0.0
+   },
+   "rollout_first_rel_l2_over_half": {
+    "mean": 35.0,
+    "std": 0.0
+   },
+   "rollout_rel_l2_10": {
+    "mean": 0.24237418174743652,
+    "std": 0.0
+   },
+   "rollout_wall_s": {
+    "mean": 2.7901651859283447,
+    "std": 0.0
+   }
+  }
+ },
+ "baseline": {
+  "source": "Mao et al. 2025 (REALM, arXiv:2512.18595) Table S.10",
+  "model": "Transolver",
+  "realm_test_error": 39.07,
+  "best_model": "FFNO",
+  "best_realm_test_error": 9.54,
+  "best_realm_corr": 0.991
+ }
+}

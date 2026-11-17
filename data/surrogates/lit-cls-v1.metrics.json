@@ -1,0 +1,1378 @@
+{
+ "rows": {
+  "total_with_count": 90,
+  "experimental": 53,
+  "simulated": 37,
+  "held_out_facilities": [
+   "UW",
+   "AFRL",
+   "Purdue",
+   "UCF",
+   "NETL",
+   "NASA",
+   "TUBerlin"
+  ],
+  "held_out_rows": 53
+ },
+ "lambda": {
+  "A": 11.5,
+  "source": "B1 Burke2012.yaml, H2/air 1 atm 300 K reference proxy; no extrapolation",
+  "rows_with_lambda": 18
+ },
+ "floor_k": {
+  "per_fold": {
+   "UW": {
+    "k": 16.099151027120186,
+    "calibration_rows": 3
+   },
+   "AFRL": {
+    "k": null,
+    "calibration_rows": 0
+   },
+   "Purdue": {
+    "k": 16.099151027120186,
+    "calibration_rows": 3
+   },
+   "UCF": {
+    "k": 16.099151027120186,
+    "calibration_rows": 3
+   },
+   "NETL": {
+    "k": 16.099151027120186,
+    "calibration_rows": 3
+   },
+   "NASA": {
+    "k": 16.099151027120186,
+    "calibration_rows": 3
+   },
+   "TUBerlin": {
+    "k": 16.099151027120186,
+    "calibration_rows": 3
+   }
+  },
+  "all_experimental": 16.099151027120186,
+  "calibration_rows": 3,
+  "bykovskii": "12 +/- 5",
+  "in_5_20": true,
+  "qualification": "fill height / B1 reference-condition lambda, not chamber-condition lambda"
+ },
+ "weighting": "confidence and facility cap applied to floor, ordinal and XGBoost; set weights divided equally over candidates; GP uses unweighted equal-candidate expansion and does not support sample weights",
+ "lofo": {
+  "floor": {
+   "n": 0,
+   "unavailable": 53
+  },
+  "geometry_floor": {
+   "n": 4,
+   "unavailable": 49,
+   "acc": 0.0,
+   "within1": 0.0,
+   "off_by_1": 0.0,
+   "mae": 14.5
+  },
+  "ordinal": {
+   "n": 53,
+   "unavailable": 0,
+   "acc": 0.32075471698113206,
+   "within1": 0.6415094339622641,
+   "off_by_1": 0.32075471698113206,
+   "mae": 1.1886792452830188,
+   "ece": 0.36857138653269284,
+   "calibration": [
+    {
+     "bin": 3,
+     "n": 5,
+     "confidence": 0.384813459377301,
+     "accuracy": 0.4
+    },
+    {
+     "bin": 4,
+     "n": 9,
+     "confidence": 0.44335926073734383,
+     "accuracy": 0.3333333333333333
+    },
+    {
+     "bin": 5,
+     "n": 8,
+     "confidence": 0.5325530214679686,
+     "accuracy": 0.5
+    },
+    {
+     "bin": 6,
+     "n": 5,
+     "confidence": 0.6317979288540629,
+     "accuracy": 0.6
+    },
+    {
+     "bin": 7,
+     "n": 5,
+     "confidence": 0.7698613904287634,
+     "accuracy": 0.2
+    },
+    {
+     "bin": 8,
+     "n": 11,
+     "confidence": 0.8442444353344748,
+     "accuracy": 0.0
+    },
+    {
+     "bin": 9,
+     "n": 10,
+     "confidence": 0.9912707879646027,
+     "accuracy": 0.4
+    }
+   ]
+  },
+  "xgboost": {
+   "n": 53,
+   "unavailable": 0,
+   "acc": 0.37735849056603776,
+   "within1": 0.7169811320754716,
+   "off_by_1": 0.33962264150943394,
+   "mae": 0.9056603773584906,
+   "ece": 0.47268754300081517,
+   "calibration": [
+    {
+     "bin": 4,
+     "n": 5,
+     "confidence": 0.47402045130729675,
+     "accuracy": 0.8
+    },
+    {
+     "bin": 5,
+     "n": 4,
+     "confidence": 0.5707361847162247,
+     "accuracy": 0.25
+    },
+    {
+     "bin": 6,
+     "n": 11,
+     "confidence": 0.6304504437880083,
+     "accuracy": 0.2727272727272727
+    },
+    {
+     "bin": 7,
+     "n": 2,
+     "confidence": 0.7925178110599518,
+     "accuracy": 0.0
+    },
+    {
+     "bin": 8,
+     "n": 11,
+     "confidence": 0.8617261323061857,
+     "accuracy": 0.2727272727272727
+    },
+    {
+     "bin": 9,
+     "n": 20,
+     "confidence": 0.9570309668779373,
+     "accuracy": 0.45
+    }
+   ]
+  },
+  "gp": {
+   "n": 53,
+   "unavailable": 0,
+   "acc": 0.39622641509433965,
+   "within1": 0.7735849056603774,
+   "off_by_1": 0.37735849056603776,
+   "mae": 0.8867924528301887,
+   "ece": 0.23295245443264315,
+   "calibration": [
+    {
+     "bin": 2,
+     "n": 29,
+     "confidence": 0.2108359809469328,
+     "accuracy": 0.3103448275862069
+    },
+    {
+     "bin": 3,
+     "n": 12,
+     "confidence": 0.3446874429480227,
+     "accuracy": 0.0
+    },
+    {
+     "bin": 4,
+     "n": 2,
+     "confidence": 0.4774706831019679,
+     "accuracy": 1.0
+    },
+    {
+     "bin": 5,
+     "n": 6,
+     "confidence": 0.541344987701204,
+     "accuracy": 1.0
+    },
+    {
+     "bin": 6,
+     "n": 4,
+     "confidence": 0.6181286226434939,
+     "accuracy": 1.0
+    }
+   ]
+  }
+ },
+ "best_model": "gp",
+ "confusion_best": {
+  "1": {
+   "1": 4,
+   "2": 8,
+   "3": 4
+  },
+  "2": {
+   "1": 7,
+   "2": 8,
+   "3": 0
+  },
+  "3": {
+   "1": 0,
+   "2": 3,
+   "3": 8
+  },
+  "4": {
+   "1": 2,
+   "2": 2,
+   "3": 1
+  },
+  "5": {
+   "1": 0,
+   "2": 1,
+   "3": 0
+  },
+  "{2|3|4}": {
+   "1": 0,
+   "2": 1,
+   "3": 0
+  },
+  "{2|4}": {
+   "1": 1,
+   "2": 0,
+   "3": 0
+  },
+  "{3|4|5}": {
+   "1": 1,
+   "2": 0,
+   "3": 0
+  },
+  "{4|5}": {
+   "1": 0,
+   "2": 2,
+   "3": 0
+  }
+ },
+ "confusion": {
+  "floor": {},
+  "geometry_floor": {
+   "1": {
+    "14": 0,
+    "16": 1,
+    "17": 1
+   },
+   "2": {
+    "14": 1,
+    "16": 0,
+    "17": 1
+   }
+  },
+  "ordinal": {
+   "1": {
+    "1": 3,
+    "2": 2,
+    "3": 9,
+    "4": 2
+   },
+   "2": {
+    "1": 5,
+    "2": 5,
+    "3": 4,
+    "4": 1
+   },
+   "3": {
+    "1": 0,
+    "2": 3,
+    "3": 8,
+    "4": 0
+   },
+   "4": {
+    "1": 2,
+    "2": 2,
+    "3": 1,
+    "4": 0
+   },
+   "5": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 0
+   },
+   "{2|3|4}": {
+    "1": 0,
+    "2": 1,
+    "3": 0,
+    "4": 0
+   },
+   "{2|4}": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 0
+   },
+   "{3|4|5}": {
+    "1": 0,
+    "2": 1,
+    "3": 0,
+    "4": 0
+   },
+   "{4|5}": {
+    "1": 2,
+    "2": 0,
+    "3": 0,
+    "4": 0
+   }
+  },
+  "xgboost": {
+   "1": {
+    "1": 0,
+    "2": 5,
+    "3": 11,
+    "4": 0
+   },
+   "2": {
+    "1": 2,
+    "2": 10,
+    "3": 2,
+    "4": 1
+   },
+   "3": {
+    "1": 0,
+    "2": 1,
+    "3": 7,
+    "4": 3
+   },
+   "4": {
+    "1": 0,
+    "2": 2,
+    "3": 3,
+    "4": 0
+   },
+   "5": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 0
+   },
+   "{2|3|4}": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 1
+   },
+   "{2|4}": {
+    "1": 0,
+    "2": 1,
+    "3": 0,
+    "4": 0
+   },
+   "{3|4|5}": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 1
+   },
+   "{4|5}": {
+    "1": 0,
+    "2": 0,
+    "3": 2,
+    "4": 0
+   }
+  },
+  "gp": {
+   "1": {
+    "1": 4,
+    "2": 8,
+    "3": 4
+   },
+   "2": {
+    "1": 7,
+    "2": 8,
+    "3": 0
+   },
+   "3": {
+    "1": 0,
+    "2": 3,
+    "3": 8
+   },
+   "4": {
+    "1": 2,
+    "2": 2,
+    "3": 1
+   },
+   "5": {
+    "1": 0,
+    "2": 1,
+    "3": 0
+   },
+   "{2|3|4}": {
+    "1": 0,
+    "2": 1,
+    "3": 0
+   },
+   "{2|4}": {
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "{3|4|5}": {
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "{4|5}": {
+    "1": 0,
+    "2": 2,
+    "3": 0
+   }
+  }
+ },
+ "residual_map": [
+  {
+   "row": 0,
+   "facility": "UW",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 3
+   }
+  },
+  {
+   "row": 1,
+   "facility": "UW",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 2
+   }
+  },
+  {
+   "row": 2,
+   "facility": "UW",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 2
+   }
+  },
+  {
+   "row": 3,
+   "facility": "UW",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 3
+   }
+  },
+  {
+   "row": 4,
+   "facility": "UW",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 2
+   }
+  },
+  {
+   "row": 5,
+   "facility": "UW",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 2
+   }
+  },
+  {
+   "row": 6,
+   "facility": "UW",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 3
+   }
+  },
+  {
+   "row": 7,
+   "facility": "UW",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 2
+   }
+  },
+  {
+   "row": 8,
+   "facility": "UW",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 3
+   }
+  },
+  {
+   "row": 9,
+   "facility": "UW",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 2,
+    "xgboost": 3,
+    "gp": 2
+   }
+  },
+  {
+   "row": 10,
+   "facility": "AFRL",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 2,
+    "xgboost": 2,
+    "gp": 2
+   }
+  },
+  {
+   "row": 11,
+   "facility": "Purdue",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 2,
+    "xgboost": 2,
+    "gp": 2
+   }
+  },
+  {
+   "row": 12,
+   "facility": "UCF",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 2,
+    "xgboost": 2,
+    "gp": 2
+   }
+  },
+  {
+   "row": 13,
+   "facility": "UW",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 2
+   }
+  },
+  {
+   "row": 14,
+   "facility": "AFRL",
+   "truth": 3,
+   "label_set": [
+    3
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 3
+   }
+  },
+  {
+   "row": 15,
+   "facility": "Purdue",
+   "truth": 3,
+   "label_set": [
+    3
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 2,
+    "gp": 3
+   }
+  },
+  {
+   "row": 16,
+   "facility": "UCF",
+   "truth": 3,
+   "label_set": [
+    3
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 3
+   }
+  },
+  {
+   "row": 17,
+   "facility": "UW",
+   "truth": 3,
+   "label_set": [
+    3
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 3
+   }
+  },
+  {
+   "row": 18,
+   "facility": "AFRL",
+   "truth": 3,
+   "label_set": [
+    3
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 3
+   }
+  },
+  {
+   "row": 19,
+   "facility": "Purdue",
+   "truth": 3,
+   "label_set": [
+    3
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 3
+   }
+  },
+  {
+   "row": 20,
+   "facility": "UCF",
+   "truth": 3,
+   "label_set": [
+    3
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 3
+   }
+  },
+  {
+   "row": 21,
+   "facility": "UW",
+   "truth": 3,
+   "label_set": [
+    3
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 3
+   }
+  },
+  {
+   "row": 22,
+   "facility": "AFRL",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": 17,
+    "ordinal": 1,
+    "xgboost": 2,
+    "gp": 1
+   }
+  },
+  {
+   "row": 23,
+   "facility": "AFRL",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": 16,
+    "ordinal": 1,
+    "xgboost": 2,
+    "gp": 1
+   }
+  },
+  {
+   "row": 24,
+   "facility": "AFRL",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": 17,
+    "ordinal": 1,
+    "xgboost": 1,
+    "gp": 1
+   }
+  },
+  {
+   "row": 25,
+   "facility": "NETL",
+   "truth": 4,
+   "label_set": [
+    4
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 1,
+    "xgboost": 2,
+    "gp": 2
+   }
+  },
+  {
+   "row": 26,
+   "facility": "NETL",
+   "truth": 5,
+   "label_set": [
+    5
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 1,
+    "xgboost": 3,
+    "gp": 2
+   }
+  },
+  {
+   "row": 27,
+   "facility": "NETL",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": 14,
+    "ordinal": 1,
+    "xgboost": 2,
+    "gp": 1
+   }
+  },
+  {
+   "row": 28,
+   "facility": "NETL",
+   "truth": 4,
+   "label_set": [
+    4
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 1,
+    "xgboost": 2,
+    "gp": 2
+   }
+  },
+  {
+   "row": 29,
+   "facility": "NETL",
+   "truth": null,
+   "label_set": [
+    4,
+    5
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 1,
+    "xgboost": 3,
+    "gp": 2
+   }
+  },
+  {
+   "row": 30,
+   "facility": "NETL",
+   "truth": null,
+   "label_set": [
+    4,
+    5
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 1,
+    "xgboost": 3,
+    "gp": 2
+   }
+  },
+  {
+   "row": 55,
+   "facility": "Purdue",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 4,
+    "xgboost": 3,
+    "gp": 1
+   }
+  },
+  {
+   "row": 56,
+   "facility": "Purdue",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 4,
+    "xgboost": 2,
+    "gp": 1
+   }
+  },
+  {
+   "row": 57,
+   "facility": "Purdue",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 1,
+    "xgboost": 1,
+    "gp": 1
+   }
+  },
+  {
+   "row": 58,
+   "facility": "Purdue",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 1,
+    "xgboost": 2,
+    "gp": 1
+   }
+  },
+  {
+   "row": 59,
+   "facility": "Purdue",
+   "truth": null,
+   "label_set": [
+    2,
+    4
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 1,
+    "xgboost": 2,
+    "gp": 1
+   }
+  },
+  {
+   "row": 60,
+   "facility": "Purdue",
+   "truth": 4,
+   "label_set": [
+    4
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 2,
+    "xgboost": 3,
+    "gp": 1
+   }
+  },
+  {
+   "row": 61,
+   "facility": "Purdue",
+   "truth": 4,
+   "label_set": [
+    4
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 2,
+    "xgboost": 3,
+    "gp": 1
+   }
+  },
+  {
+   "row": 62,
+   "facility": "Purdue",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 2,
+    "xgboost": 3,
+    "gp": 1
+   }
+  },
+  {
+   "row": 63,
+   "facility": "Purdue",
+   "truth": 4,
+   "label_set": [
+    4
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 3,
+    "gp": 3
+   }
+  },
+  {
+   "row": 64,
+   "facility": "Purdue",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 1,
+    "xgboost": 2,
+    "gp": 1
+   }
+  },
+  {
+   "row": 65,
+   "facility": "NASA",
+   "truth": 3,
+   "label_set": [
+    3
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 2,
+    "xgboost": 4,
+    "gp": 2
+   }
+  },
+  {
+   "row": 66,
+   "facility": "NASA",
+   "truth": null,
+   "label_set": [
+    3,
+    4,
+    5
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 2,
+    "xgboost": 4,
+    "gp": 1
+   }
+  },
+  {
+   "row": 67,
+   "facility": "NASA",
+   "truth": null,
+   "label_set": [
+    2,
+    3,
+    4
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 2,
+    "xgboost": 4,
+    "gp": 2
+   }
+  },
+  {
+   "row": 68,
+   "facility": "NASA",
+   "truth": 3,
+   "label_set": [
+    3
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 2,
+    "xgboost": 4,
+    "gp": 2
+   }
+  },
+  {
+   "row": 69,
+   "facility": "NASA",
+   "truth": 3,
+   "label_set": [
+    3
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 2,
+    "xgboost": 4,
+    "gp": 2
+   }
+  },
+  {
+   "row": 70,
+   "facility": "NASA",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 2,
+    "xgboost": 4,
+    "gp": 1
+   }
+  },
+  {
+   "row": 75,
+   "facility": "TUBerlin",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 2,
+    "gp": 2
+   }
+  },
+  {
+   "row": 76,
+   "facility": "TUBerlin",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 2,
+    "gp": 2
+   }
+  },
+  {
+   "row": 77,
+   "facility": "TUBerlin",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 1,
+    "xgboost": 2,
+    "gp": 2
+   }
+  },
+  {
+   "row": 78,
+   "facility": "TUBerlin",
+   "truth": 1,
+   "label_set": [
+    1
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 4,
+    "xgboost": 2,
+    "gp": 2
+   }
+  },
+  {
+   "row": 79,
+   "facility": "UW",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 2,
+    "xgboost": 2,
+    "gp": 2
+   }
+  },
+  {
+   "row": 80,
+   "facility": "TUBerlin",
+   "truth": 2,
+   "label_set": [
+    2
+   ],
+   "predictions": {
+    "floor": null,
+    "geometry_floor": null,
+    "ordinal": 3,
+    "xgboost": 2,
+    "gp": 2
+   }
+  }
+ ],
+ "simulated_test": {
+  "floor": {
+   "n": 0,
+   "unavailable": 37
+  },
+  "geometry_floor": {
+   "n": 3,
+   "unavailable": 34,
+   "acc": 0.0,
+   "within1": 0.0,
+   "off_by_1": 0.0,
+   "mae": 15.333333333333334
+  },
+  "ordinal": {
+   "n": 37,
+   "unavailable": 0,
+   "acc": 0.43243243243243246,
+   "within1": 0.972972972972973,
+   "off_by_1": 0.5405405405405406,
+   "mae": 0.5945945945945946,
+   "ece": 0.348985426866865,
+   "calibration": [
+    {
+     "bin": 3,
+     "n": 15,
+     "confidence": 0.3620027352231206,
+     "accuracy": 0.6666666666666666
+    },
+    {
+     "bin": 4,
+     "n": 7,
+     "confidence": 0.43778544790269264,
+     "accuracy": 0.14285714285714285
+    },
+    {
+     "bin": 5,
+     "n": 8,
+     "confidence": 0.5347786153178639,
+     "accuracy": 0.375
+    },
+    {
+     "bin": 9,
+     "n": 7,
+     "confidence": 0.9999678235084364,
+     "accuracy": 0.2857142857142857
+    }
+   ]
+  },
+  "xgboost": {
+   "n": 37,
+   "unavailable": 0,
+   "acc": 0.24324324324324326,
+   "within1": 0.5675675675675675,
+   "off_by_1": 0.32432432432432434,
+   "mae": 1.3243243243243243,
+   "ece": 0.42392683029174805,
+   "calibration": [
+    {
+     "bin": 3,
+     "n": 3,
+     "confidence": 0.35682615637779236,
+     "accuracy": 0.0
+    },
+    {
+     "bin": 4,
+     "n": 3,
+     "confidence": 0.47205057740211487,
+     "accuracy": 0.0
+    },
+    {
+     "bin": 5,
+     "n": 6,
+     "confidence": 0.5605661273002625,
+     "accuracy": 0.5
+    },
+    {
+     "bin": 6,
+     "n": 6,
+     "confidence": 0.6554022431373596,
+     "accuracy": 0.16666666666666666
+    },
+    {
+     "bin": 7,
+     "n": 17,
+     "confidence": 0.751394510269165,
+     "accuracy": 0.17647058823529413
+    },
+    {
+     "bin": 9,
+     "n": 2,
+     "confidence": 0.935427188873291,
+     "accuracy": 1.0
+    }
+   ]
+  },
+  "gp": {
+   "n": 37,
+   "unavailable": 0,
+   "acc": 0.5675675675675675,
+   "within1": 0.9459459459459459,
+   "off_by_1": 0.3783783783783784,
+   "mae": 0.4864864864864865,
+   "ece": 0.20791879320012743,
+   "calibration": [
+    {
+     "bin": 2,
+     "n": 13,
+     "confidence": 0.20000000000000004,
+     "accuracy": 0.23076923076923078
+    },
+    {
+     "bin": 3,
+     "n": 4,
+     "confidence": 0.36614421803330666,
+     "accuracy": 0.75
+    },
+    {
+     "bin": 4,
+     "n": 17,
+     "confidence": 0.44791541073417407,
+     "accuracy": 0.7058823529411765
+    },
+    {
+     "bin": 5,
+     "n": 2,
+     "confidence": 0.5044354216801084,
+     "accuracy": 1.0
+    },
+    {
+     "bin": 6,
+     "n": 1,
+     "confidence": 0.6189949536208832,
+     "accuracy": 1.0
+    }
+   ]
+  }
+ }
+}

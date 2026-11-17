@@ -1,0 +1,57 @@
+schema: skuld2.run/1
+run_id: Run00010
+case_id: Case00007
+source_kind: sim_self
+access: null
+sweep: postdeploy-znd
+campaign: postdeploy-znd
+rung: validation
+template: znd-1d
+template_version: 2
+module: detonationFluid
+family: det1d-h2air
+params:
+  T_fill: 300.0
+  cells: 5682
+  chem_abs_tol: 1e-8
+  chem_rel_tol: 0.0001
+  d_cj_m_s: 1975.2
+  driver_T: 2000.0
+  driver_length_mm: 2.0
+  driver_p_atm: 90.0
+  end_time_us: 20.0
+  flux_scheme: Kurganov
+  induction_length_m: 0.00019
+  length_mm: 25.0
+  max_co: 0.1
+  n_writes: 20
+  p_fill: 101325.0
+  phi: 1.0
+  probe_interval_ns: 1.0
+  probe_spacing_mm: 0.5
+  solver_type: Euler
+  sw_position_limit_m: 0.024
+stage: CASE_BUILT
+stages:
+- stage: CREATED
+  at: 2026-11-17T01:28:09Z
+- stage: CASE_BUILT
+  at: 2026-11-17T01:28:09Z
+terminal: null
+pause_reason: null
+openfoam: foundation-14@64cfdf54
+image: null
+node: mini
+ranks: 1
+manifest_sha256: c9302efdb7ba0bf295e0f0fad2cb7550f3619723d741d3f2cf77e65d8052e993
+mesh_sha256: null
+cells: null
+resolution: null
+end_time_s: 0.00002
+sim_time_s: null
+wall_s: null
+last_time: null
+judge: null
+odin_folder: null
+skuld2_commit: 187174cea8c4664a8778b588297b5d2fcdc6e909
+eggs_commit: null

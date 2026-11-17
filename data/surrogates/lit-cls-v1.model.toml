@@ -1,0 +1,17 @@
+model_id = "lit-cls-v1"
+kind = "tabular"
+status = "candidate"
+trained_on = [{ "dataset" = "lit-wavecount", "version" = "v1", "split" = "leave-one-facility-out" }]
+solver_lines = ["literature"]
+fidelity = ["literature"]
+valid_for = "a prior for the first sweep's box and active learning (H2/air and CH4/O2 RDEs, published facilities); not a predictor of skuld2 labels"
+code = "skuld2@8a374240b3d30d936ffb17fe840582d6e1f951f0"
+source_sha256 = "5e3fd89eb28884fccb41ad90db240fbe27e44696903513d5f1ff2db8988c2d24"
+env_lock_sha = "c4a69e97e20abbc6755e041e78413aa7d60e6f2266c8999cf9e40868231f57d3"
+compute = "mini:cpu"
+config = "eval/config.toml"
+config_sha256 = "836f691e785880728de6661ba2d34d77f8d05db9b32d31f79c351c86cd9a1a1a"
+
+["inputs"]
+"points" = "86560c6249c8f656125a5796dc2a5aa0702fbc68f13a0a56c76f961eb01c178c"
+"refs" = "c592f98ec612f00dba9387ea0077fd6498333cb722594293cb0378fc5c5a156f"

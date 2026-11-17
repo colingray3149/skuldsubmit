@@ -1,0 +1,68 @@
+schema: skuld2.run/1
+run_id: Run00005
+case_id: Case00005
+source_kind: sim_self
+access: open
+sweep: null
+campaign: null
+rung: null
+template: sod-shocktube
+template_version: 1
+module: shockFluid
+family: canonical-sod
+params:
+  T_left: 348.432
+  T_right: 278.746
+  cells: 1000
+  end_time: 0.0063246
+  flux_scheme: Kurganov
+  max_co: 0.2
+  n_writes: 10
+  p_left: 100000.0
+  p_right: 10000.0
+  x_max: 5.0
+  x_min: -5.0
+stage: COMMITTED
+stages:
+- stage: CREATED
+  at: 2026-11-16T00:03:50Z
+- stage: CASE_BUILT
+  at: 2026-11-16T00:03:50Z
+- stage: CHECKED
+  at: 2026-11-16T00:07:54Z
+- stage: RUNNING
+  at: 2026-11-16T00:07:54Z
+- stage: TERMINAL
+  at: 2026-11-16T00:07:56Z
+- stage: POSTPROCESSED
+  at: 2026-11-16T00:08:04Z
+- stage: JUDGED
+  at: 2026-11-16T00:08:22Z
+- stage: EXPORTED
+  at: 2026-11-16T00:08:22Z
+- stage: COMMITTED
+  at: 2026-11-16T00:08:22Z
+terminal:
+  state: COMPLETED
+  name: END_TIME
+pause_reason: null
+openfoam: foundation-14@64cfdf54
+image: localhost/skuld2-openfoam@sha256:f48da2bf44a62074a45cf601c0960ebfe6aad4171a6d524e5d0f886c2b64d291
+node: mini
+ranks: 1
+manifest_sha256: 7a4392ff0ae05ed3ef9b1e905b8a5f4ec3bbfb95de835b5d0909a36583159ceb
+mesh_sha256: 1c5b983783dda0786ee76dbe4892a2408b626fb9cc8576d2833aa23a36924bd5
+cells: 1000
+resolution:
+  dx_min_m: 0.01
+  induction_length_m: null
+  points_per_induction: null
+  amr_levels: 0
+end_time_s: 0.0063246
+sim_time_s: 0.0063246
+wall_s: 2.148170213
+last_time: '0.0063246'
+judge: none
+odin_folder: mini:odin-final-sod
+skuld2_commit: d1878c28b27b804fbf9de945b6b6a61598876b5f
+eggs_commit: null

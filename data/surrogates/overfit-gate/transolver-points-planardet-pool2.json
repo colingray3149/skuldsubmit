@@ -1,0 +1,26 @@
+{
+ "overfit_loss": 0.7301809191703796,
+ "overfit_wall_s": 358.95959401130676,
+ "max_loss": 0.05,
+ "config_sha256": "2745d5dfa41a999dacc359d1aae3455aeecdaf0f8b4e408b580956c90f1ba8b1",
+ "datasets": {
+  "realm-planardet-pool2/v1": "e33152ffbe13304f16447c7ebe6aba1fb21f0447478cd9e6bb0c1f9e4974f5c9",
+  "realm-planardet/v1": "ab59ce648746033e84c22385134c9246fa8d15c260c7d341ed0b9b344e44c139"
+ },
+ "env_lock_sha": "c4a69e97e20abbc6755e041e78413aa7d60e6f2266c8999cf9e40868231f57d3",
+ "candidate_spec": {
+  "kind": "transolver-points",
+  "hidden": 128,
+  "layers": 6,
+  "heads": 8,
+  "slices": 32,
+  "mlp_ratio": 2,
+  "activation_checkpointing": true,
+  "points": 32768,
+  "batch": 2
+ },
+ "source_sha256": "d43c8d389bad05eae3d61bc6ca05d49e815d127e5f7c85bd20217c81da14f481",
+ "code": "skuld2@8ba42821a8d1c976ca3ef27ff37332f74cf342c6",
+ "rollout_peak_mib": 377,
+ "passed": false
+}

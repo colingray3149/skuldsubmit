@@ -1,0 +1,88 @@
+{
+ "per_seed": {
+  "11": {
+   "val": {
+    "nonfinite": 0.0,
+    "rollout_rel_l2_100": 0.3092910743149735,
+    "wave_count_label": 2.6308724832214767,
+    "wave_count_pred": 2.61744966442953,
+    "wave_count_ref": 2.6308724832214767,
+    "wave_count_acc": 0.9798657718120806,
+    "n_runs": 149
+   },
+   "test": {
+    "nonfinite": 0.0,
+    "rollout_rel_l2_100": 0.32241374540121054,
+    "wave_count_label": 2.612403100775194,
+    "wave_count_pred": 2.635658914728682,
+    "wave_count_ref": 2.612403100775194,
+    "wave_count_acc": 0.9922480620155039,
+    "n_runs": 129
+   },
+   "best_epoch": 43,
+   "best_val_loss": 0.3363268312532455
+  }
+ },
+ "ensemble": {
+  "val": {
+   "n_runs": {
+    "mean": 149.0,
+    "std": 0.0
+   },
+   "nonfinite": {
+    "mean": 0.0,
+    "std": 0.0
+   },
+   "rollout_rel_l2_100": {
+    "mean": 0.3092910743149735,
+    "std": 0.0
+   },
+   "wave_count_acc": {
+    "mean": 0.9798657718120806,
+    "std": 0.0
+   },
+   "wave_count_label": {
+    "mean": 2.6308724832214767,
+    "std": 0.0
+   },
+   "wave_count_pred": {
+    "mean": 2.61744966442953,
+    "std": 0.0
+   },
+   "wave_count_ref": {
+    "mean": 2.6308724832214767,
+    "std": 0.0
+   }
+  },
+  "test": {
+   "n_runs": {
+    "mean": 129.0,
+    "std": 0.0
+   },
+   "nonfinite": {
+    "mean": 0.0,
+    "std": 0.0
+   },
+   "rollout_rel_l2_100": {
+    "mean": 0.32241374540121054,
+    "std": 0.0
+   },
+   "wave_count_acc": {
+    "mean": 0.9922480620155039,
+    "std": 0.0
+   },
+   "wave_count_label": {
+    "mean": 2.612403100775194,
+    "std": 0.0
+   },
+   "wave_count_pred": {
+    "mean": 2.635658914728682,
+    "std": 0.0
+   },
+   "wave_count_ref": {
+    "mean": 2.612403100775194,
+    "std": 0.0
+   }
+  }
+ }
+}

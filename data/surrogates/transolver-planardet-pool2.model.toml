@@ -1,0 +1,39 @@
+model_id = "transolver-planardet-pool2"
+status = "external-baseline"
+trained_on = [{ "dataset" = "realm-planardet-pool2", "version" = "v1 of hf:realm-bench/realm-bench-PlanarDet main, MANIFEST.tsv sha256 2639efc7cf1905cb", "split" = "realm" }]
+solver_lines = ["realm-planardet"]
+fidelity = ["external"]
+valid_for = "planar cellular detonation, premixed H2/O2/N2 (x:1:7, x 1.6-2.4), T0 290-330 K, 100 kPa, the one REALM channel geometry"
+code = "skuld2@0399b936ee90ff7820bf6c6b34bed5ff991337e7"
+source_sha256 = "71a33dd2d6a418c260fa6b56b41746a6304e9c855e5746343627c1588e2ed2a3"
+env_lock_sha = "c4a69e97e20abbc6755e041e78413aa7d60e6f2266c8999cf9e40868231f57d3"
+compute = "pc:rtx3070"
+candidate = "transolver-grid-b1"
+config = "eval/config.toml"
+seeds = [11]
+config_sha256 = "d0a9da63f56eeb7693a4e3c3dd1d0d9d4c2739b49ebb240e927bc3659fe5aaea"
+params = 2334588
+train_peak_mib = 986
+note = "baseline trained past a failed overfit check (04 Tests 10): loss 0.504 > 0.05 at skuld2 8ba4282, eggs a4d1590 bench/surrogate-overfit; the rerun at this code is in overfit_gate"
+
+["weights"]
+"11" = "93091491ade43b48dc074ff71ad5f4ef1db5b95c56d794e51a3e95eb5d350b47"
+
+["datasets"]
+"realm-planardet-pool2/v1" = "e33152ffbe13304f16447c7ebe6aba1fb21f0447478cd9e6bb0c1f9e4974f5c9"
+"realm-planardet/v1" = "ab59ce648746033e84c22385134c9246fa8d15c260c7d341ed0b9b344e44c139"
+
+["overfit_gate"]
+"passed" = false
+"allowed_failure" = true
+"overfit_loss" = 0.5042474493384361
+"max_loss" = 0.05
+"rollout_peak_mib" = 448
+
+["baseline"]
+"source" = "Mao et al. 2025 (REALM, arXiv:2512.18595) Table S.10"
+"model" = "Transolver"
+"realm_test_error" = 39.07
+"best_model" = "FFNO"
+"best_realm_test_error" = 9.54
+"best_realm_corr" = 0.991

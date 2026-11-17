@@ -1,0 +1,31 @@
+model_id = "fno-planardet-pool2"
+status = "external-baseline"
+trained_on = [{ "dataset" = "realm-planardet-pool2", "version" = "v1 of hf:realm-bench/realm-bench-PlanarDet main, MANIFEST.tsv sha256 2639efc7cf1905cb", "split" = "realm" }]
+solver_lines = ["realm-planardet"]
+fidelity = ["external"]
+valid_for = "planar cellular detonation, premixed H2/O2/N2 (x:1:7, x 1.6-2.4), T0 290-330 K, 100 kPa, the one REALM channel geometry"
+code = "skuld2@8a374240b3d30d936ffb17fe840582d6e1f951f0"
+source_sha256 = "5e3fd89eb28884fccb41ad90db240fbe27e44696903513d5f1ff2db8988c2d24"
+env_lock_sha = "c4a69e97e20abbc6755e041e78413aa7d60e6f2266c8999cf9e40868231f57d3"
+compute = "pc:rtx3070"
+candidate = "fno-pool2-b4"
+config = "eval/config.toml"
+seeds = [11]
+config_sha256 = "7d082474333423d6f786f304c85b689009ab25eae1a9455374d3b442fa1b897a"
+params = 10289996
+train_peak_mib = 4030
+
+["weights"]
+"11" = "990b1f0f15aab41d673d7c052a7c7566e25c6f43eb155e96ca4ee4611b243cc4"
+
+["datasets"]
+"realm-planardet-pool2/v1" = "e33152ffbe13304f16447c7ebe6aba1fb21f0447478cd9e6bb0c1f9e4974f5c9"
+"realm-planardet/v1" = "ab59ce648746033e84c22385134c9246fa8d15c260c7d341ed0b9b344e44c139"
+
+["baseline"]
+"source" = "Mao et al. 2025 (REALM, arXiv:2512.18595) Table S.10"
+"model" = "FNO"
+"realm_test_error" = 27.1
+"best_model" = "FFNO"
+"best_realm_test_error" = 9.54
+"best_realm_corr" = 0.991

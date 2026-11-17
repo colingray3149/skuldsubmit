@@ -1,0 +1,77 @@
+schema: skuld2.run/1
+run_id: Run00006
+case_id: Case00006
+source_kind: sim_self
+access: open
+sweep: null
+campaign: null
+rung: null
+template: znd-1d
+template_version: 2
+module: detonationFluid
+family: det1d-h2air
+params:
+  T_fill: 300.0
+  cells: 1000
+  chem_abs_tol: 1e-8
+  chem_rel_tol: 0.0001
+  d_cj_m_s: 1975.2
+  driver_T: 2000.0
+  driver_length_mm: 2.0
+  driver_p_atm: 90.0
+  end_time_us: 1.0
+  flux_scheme: Kurganov
+  induction_length_m: 0.00019
+  length_mm: 25.0
+  max_co: 0.4
+  n_writes: 20
+  p_fill: 101325.0
+  phi: 1.0
+  probe_interval_ns: 1.0
+  probe_spacing_mm: 0.5
+  solver_type: Euler
+  sw_position_limit_m: 0.024
+stage: COMMITTED
+stages:
+- stage: CREATED
+  at: 2026-11-16T00:04:19Z
+- stage: CASE_BUILT
+  at: 2026-11-16T00:04:19Z
+- stage: CHECKED
+  at: 2026-11-16T00:08:01Z
+- stage: RUNNING
+  at: 2026-11-16T00:08:01Z
+- stage: TERMINAL
+  at: 2026-11-16T00:08:08Z
+- stage: POSTPROCESSED
+  at: 2026-11-16T00:08:08Z
+- stage: JUDGED
+  at: 2026-11-16T00:08:23Z
+- stage: EXPORTED
+  at: 2026-11-16T00:08:23Z
+- stage: COMMITTED
+  at: 2026-11-16T00:08:23Z
+terminal:
+  state: COMPLETED
+  name: END_TIME
+pause_reason: null
+openfoam: foundation-14@64cfdf54
+image: localhost/skuld2-openfoam@sha256:f48da2bf44a62074a45cf601c0960ebfe6aad4171a6d524e5d0f886c2b64d291
+node: mini
+ranks: 1
+manifest_sha256: 31582c5b5fce3827e288b275dc996d3063e0489f47931e95f148a8a298c166e2
+mesh_sha256: 6fdf07763ff9db5c4ca7218cb317a3bd0bbc453adb8b237030605c217c28536f
+cells: 1000
+resolution:
+  dx_min_m: 0.000025
+  induction_length_m: 0.00019
+  points_per_induction: 7.6
+  amr_levels: 0
+end_time_s: 1e-6
+sim_time_s: 1e-6
+wall_s: 6.252714735
+last_time: '1e-06'
+judge: none
+odin_folder: mini:odin-final-znd
+skuld2_commit: d1878c28b27b804fbf9de945b6b6a61598876b5f
+eggs_commit: null

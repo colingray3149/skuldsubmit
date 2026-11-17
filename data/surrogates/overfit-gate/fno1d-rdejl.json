@@ -1,0 +1,30 @@
+{
+ "overfit_loss": 0.013410383835434914,
+ "overfit_wall_s": 45.3999400138855,
+ "max_loss": 0.02,
+ "config_sha256": "3733f8cd4fed474b85cdab7bb33b73ca19c16b219b49441bf541b93225e8e720",
+ "datasets": {
+  "rdejl-b4/v1": "a1736d38ece357193a058a9d0747a8b90602593f83a2dafb4b0ff31a24939676"
+ },
+ "env_lock_sha": "c4a69e97e20abbc6755e041e78413aa7d60e6f2266c8999cf9e40868231f57d3",
+ "candidate_spec": {
+  "kind": "fno1d",
+  "modes": [
+   64
+  ],
+  "hidden": 32,
+  "layers": 4,
+  "lifting_channel_ratio": 2,
+  "projection_channel_ratio": 4,
+  "norm": "group_norm",
+  "shape": [
+   512
+  ],
+  "window": 8,
+  "batch": 16
+ },
+ "source_sha256": "d43c8d389bad05eae3d61bc6ca05d49e815d127e5f7c85bd20217c81da14f481",
+ "code": "skuld2@8ba42821a8d1c976ca3ef27ff37332f74cf342c6",
+ "rollout_peak_mib": 21,
+ "passed": true
+}

@@ -1,0 +1,22 @@
+model_id = "fno1d-rdejl"
+status = "candidate"
+trained_on = [{ "dataset" = "rdejl-b4", "version" = "v1 of bg B4, config.toml sha256 dee022b023747716", "split" = "rdejl-b4" }]
+solver_lines = ["rdejl-koch2020"]
+fidelity = ["f1"]
+valid_for = "Koch et al. 2020 1D RDE model rings (bg B4 box); a known-answer check of the wave-count gate, not RDE physics"
+code = "skuld2@8ba42821a8d1c976ca3ef27ff37332f74cf342c6"
+source_sha256 = "d43c8d389bad05eae3d61bc6ca05d49e815d127e5f7c85bd20217c81da14f481"
+env_lock_sha = "c4a69e97e20abbc6755e041e78413aa7d60e6f2266c8999cf9e40868231f57d3"
+compute = "pc:rtx3070"
+candidate = "fno1d-ring-b16"
+config = "eval/config.toml"
+seeds = [11]
+config_sha256 = "3733f8cd4fed474b85cdab7bb33b73ca19c16b219b49441bf541b93225e8e720"
+params = 151393
+train_peak_mib = 57
+
+["weights"]
+"11" = "25c919e5ded69521e6fd2ab8c546ec34b2ed6cb6df4aa5b13bc1d56d9fe14fff"
+
+["datasets"]
+"rdejl-b4/v1" = "a1736d38ece357193a058a9d0747a8b90602593f83a2dafb4b0ff31a24939676"
